@@ -8,7 +8,7 @@ const TestimonialsSection = () => {
         <div className="testimonials-grid">
           <div className="testimonial-card">
             <div className="avatar">
-              <img src="http://localhost:3845/assets/9d08c4a53d8b9f186f0f00dc5c21cd7fc9b7474e.png" alt="Coach Martinez" />
+              <img src="/assets/Gemini_Generated_Image_lqwdg9lqwdg9lqwd 1.png" alt="Coach Martinez" />
             </div>
             <div className="testimonial-content">
               <p className="quote">Before AthleteQ, I was benching players based on gut feeling. With the readiness dashboard, I now see mental state data every morning. We've won 6 more matches this season because I make smarter lineup decisions.</p>
@@ -21,7 +21,7 @@ const TestimonialsSection = () => {
 
           <div className="testimonial-card">
             <div className="avatar">
-              <img src="http://localhost:3845/assets/600a38f52a28a620e44ab42a1fb8b7e8cd7c8042.png" alt="Sam K." />
+              <img src="/assets/Photo - Athlete 3.png" alt="Sam K." />
             </div>
             <div className="testimonial-content">
               <p className="quote">Mental Reps helped me stay calm in penalty situations. I used to freeze under pressure now I score 20% more in high-stakes moments. The AI Coach feels like having a sports psychologist in my pocket 24/7.</p>
@@ -34,7 +34,7 @@ const TestimonialsSection = () => {
 
           <div className="testimonial-card">
             <div className="avatar">
-              <img src="http://localhost:3845/assets/7e1d4d48996b10fc1f4aef739ab41c73f9fc403e.png" alt="James Thompson" />
+              <img src="/assets/Gemini_Generated_Image_5f0q4f5f0q4f5f0q 1.png" alt="James Thompson" />
             </div>
             <div className="testimonial-content">
               <p className="quote">We prevented 2 mental crises this year thanks to early detection—that's €100k+ saved in player development investment alone. Best ROI we've seen from any tech platform. AthleteQ pays for itself 10x over.</p>

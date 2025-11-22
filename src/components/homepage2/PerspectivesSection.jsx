@@ -9,7 +9,7 @@ const PerspectivesSection = () => {
         </div>
         <div className="cards-grid">
           <div className="perspective-card">
-            <img src="http://localhost:3845/assets/b757fc777e3cdaa574091ab1ef1e0827b9a3497e.png" alt="For Athletes" />
+            <img src="/assets/Card - For Athletes.png" alt="For Athletes" />
             <h3>FOR ATHLETES</h3>
             <div className="card-hover-overlay">
               <h3 className="card-hover-title">FOR ATHLETES</h3>
@@ -18,7 +18,7 @@ const PerspectivesSection = () => {
             </div>
           </div>
           <div className="perspective-card">
-            <img src="http://localhost:3845/assets/4a9085a2121475c03038d03585680b8521116a37.png" alt="For Coaches" />
+            <img src="/assets/Card - For Coaches.png" alt="For Coaches" />
             <h3>FOR COACHES</h3>
             <div className="card-hover-overlay">
               <h3 className="card-hover-title">FOR COACHES</h3>
@@ -27,7 +27,7 @@ const PerspectivesSection = () => {
             </div>
           </div>
           <div className="perspective-card">
-            <img src="http://localhost:3845/assets/e6f83deb631ccdae206ce0f37afd6500309a5b20.png" alt="For Clubs" />
+            <img src="/assets/Card - For Clubspng.png" alt="For Clubs" />
             <h3>FOR CLUBS</h3>
             <div className="card-hover-overlay">
               <h3 className="card-hover-title">FOR CLUBS</h3>
@@ -36,7 +36,7 @@ const PerspectivesSection = () => {
             </div>
           </div>
           <div className="perspective-card">
-            <img src="http://localhost:3845/assets/0df66375a0e0269949de723ba290785efa6a347d.png" alt="For Parents" />
+            <img src="/assets/Card - For Parrents.png" alt="For Parents" />
             <h3>FOR PARRENTS</h3>
             <div className="card-hover-overlay">
               <h3 className="card-hover-title">FOR PARENTS</h3>
@@ -45,7 +45,7 @@ const PerspectivesSection = () => {
             </div>
           </div>
           <div className="perspective-card">
-            <img src="http://localhost:3845/assets/432e0c08560447c827c40f2f02801e589e300068.png" alt="For Experts" />
+            <img src="/assets/Card - For Expertspng.png" alt="For Experts" />
             <h3>FOR EXPERTS</h3>
             <div className="card-hover-overlay">
               <h3 className="card-hover-title">FOR EXPERTS</h3>

@@ -5,7 +5,7 @@ const HeroSection = () => {
       {/* Hero Background */}
       <div className="hero-background">
         <div className="hero-background-inner">
-          <img src="http://localhost:3845/assets/b374c9c02b339586ed379284ed5faaa8419686cb.png" alt="" className="hero-background-img" />
+          <img src="/assets/hero background.png" alt="" className="hero-background-img" />
         </div>
       </div>
 
@@ -29,7 +29,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="hero-image">
-          <img src="http://localhost:3845/assets/b374c9c02b339586ed379284ed5faaa8419686cb.png" alt="Athlete" />
+          <img src="/assets/Photo Athlete 1.png" alt="Athlete" />
         </div>
       </div>
     </section>
