@@ -172,7 +172,7 @@ h1, h2, h3, h4 {
     position: absolute;
     left: 50%;
     top: 0;
-    transform: translateX(-50%);
+    /* Transform will be managed by GSAP to avoid conflicts */
     width: 100vw;
     height: 1456px;
     opacity: 0.1;
@@ -204,9 +204,9 @@ h1, h2, h3, h4 {
     width: 100vw;
     height: 1456px;
     background-image:
-        repeating-linear-gradient(0deg, rgba(199, 240, 67, 0.05) 0px, rgba(199, 240, 67, 0.05) 1px, transparent 1px, transparent 60px),
-        repeating-linear-gradient(90deg, rgba(199, 240, 67, 0.05) 0px, rgba(199, 240, 67, 0.05) 1px, transparent 1px, transparent 60px);
-    z-index: 1;
+        repeating-linear-gradient(0deg, rgba(199, 240, 67, 0.15) 0px, rgba(199, 240, 67, 0.15) 1px, transparent 1px, transparent 80px),
+        repeating-linear-gradient(90deg, rgba(199, 240, 67, 0.15) 0px, rgba(199, 240, 67, 0.15) 1px, transparent 1px, transparent 80px);
+    z-index: 2;
     pointer-events: none;
 }
 
@@ -230,7 +230,7 @@ h1, h2, h3, h4 {
     padding: 0 120px;
     gap: 100px;
     position: relative;
-    z-index: 1;
+    z-index: 3;
 }
 
 .hero-content {
@@ -241,10 +241,12 @@ h1, h2, h3, h4 {
     font-size: 34px;
     line-height: normal;
     margin-bottom: 34px;
+    perspective: 1000px; /* Enable 3D transforms for character animation */
 }
 
 .hero-title .highlight {
     color: var(--primary-green);
+    display: inline-block; /* Allow transforms on highlight spans */
 }
 
 .hero-description {
@@ -299,6 +301,7 @@ h1, h2, h3, h4 {
     border-radius: 71px;
     overflow: hidden;
     position: relative;
+    z-index: 3;
 }
 
 .hero-image img {
@@ -309,6 +312,7 @@ h1, h2, h3, h4 {
     object-fit: cover;
     mix-blend-mode: luminosity;
     transform: translate(-333px, -108px);
+    transform-origin: center center; /* For zoom animation */
 }
 
 /* AI Coach Section */
