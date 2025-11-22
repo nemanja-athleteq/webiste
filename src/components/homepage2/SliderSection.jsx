@@ -112,7 +112,8 @@ const SliderSection = () => {
           style={{
             backgroundImage: `url(${slides[currentSlide].image})`,
             opacity: opacity,
-            transition: 'opacity 400ms ease-in-out'
+            transition: 'opacity 400ms ease-in-out',
+            filter: currentSlide === 0 ? 'grayscale(100%)' : 'none'
           }}
         />
 

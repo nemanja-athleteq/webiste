@@ -419,7 +419,6 @@ h1, h2, h3, h4 {
     align-items: flex-start;
     justify-content: center;
     padding: 120px;
-    overflow: hidden;
 }
 
 .slider-background {
