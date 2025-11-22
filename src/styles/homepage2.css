@@ -608,6 +608,7 @@ h1, h2, h3, h4 {
 
 /* Testimonials Section */
 .testimonials-section {
+    position: relative;
     min-height: 983px;
     display: flex;
     align-items: center;
@@ -620,6 +621,8 @@ h1, h2, h3, h4 {
     width: 100%;
     padding: 0 120px;
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 .testimonials-inner h2 {
@@ -696,6 +699,44 @@ h1, h2, h3, h4 {
     color: var(--primary-green);
 }
 
+/* Decorative blob between Testimonials and CTA */
+.decoration-blob {
+    position: absolute;
+    bottom: -320px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 663px;
+    height: 721px;
+    background: url('/assets/decoration-blob.svg') no-repeat center;
+    background-size: contain;
+    opacity: 1;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Decorative lines on sides of Testimonials */
+.decoration-lines {
+    position: absolute;
+    width: 551px;
+    height: 767px;
+    background: url('/assets/decoration-lines.svg') no-repeat center;
+    background-size: contain;
+    opacity: 1;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.decoration-lines-left {
+    bottom: -500px;
+    left: -200px;
+}
+
+.decoration-lines-right {
+    bottom: -500px;
+    right: -200px;
+    transform: scaleX(-1);
+}
+
 /* CTA Section */
 .cta-section {
     min-height: 983px;
@@ -720,7 +761,7 @@ h1, h2, h3, h4 {
     font-size: 30px;
     line-height: normal;
     max-width: 712px;
-    margin-bottom: 32px;
+    margin-bottom: 0;
 }
 
 .cta-inner .subtitle {
@@ -728,7 +769,21 @@ h1, h2, h3, h4 {
     line-height: 29px;
     color: var(--text-gray);
     max-width: 575px;
-    margin-bottom: 32px;
+    margin-bottom: 0;
+}
+
+.cta-text-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.cta-button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
 }
 
 .btn-primary-large {
@@ -752,7 +807,7 @@ h1, h2, h3, h4 {
     font-size: 16px;
     line-height: 24px;
     color: var(--text-gray);
-    margin-bottom: 32px;
+    margin-bottom: 0;
 }
 
 .trusted-section {

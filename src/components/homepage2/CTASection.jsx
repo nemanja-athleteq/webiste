@@ -1,13 +1,17 @@
-// CTA Section Component - EXACT COPY from homepage2.html
+// CTA Section Component - Updated with Figma spacing
 const CTASection = () => {
   return (
     <section className="cta-section">
       <div className="cta-inner">
-        <h2>Join 2000+ Athletes, 50+ Clubs, 100+ Experts in the AthleteQ Ecosystem</h2>
-        <p className="subtitle">Don't let your competition get ahead. Start measuring and improving mental performance today.</p>
+        <div className="cta-text-group">
+          <h2>Join 2000+ Athletes, 50+ Clubs, 100+ Experts in the AthleteQ Ecosystem</h2>
+          <p className="subtitle">Don't let your competition get ahead. Start measuring and improving mental performance today.</p>
+        </div>
 
-        <button className="btn-primary-large">Request a Demo</button>
-        <p className="note">For clubs and organizations</p>
+        <div className="cta-button-group">
+          <button className="btn-primary-large">Request a Demo</button>
+          <p className="note">For clubs and organizations</p>
+        </div>
 
         <div className="trusted-section">
           <h3>Trusted by Leading Clubs & Elite Athletes</h3>

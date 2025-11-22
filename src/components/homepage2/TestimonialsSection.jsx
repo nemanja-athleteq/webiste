@@ -1,4 +1,4 @@
-// Testimonials Section Component - EXACT COPY from homepage2.html
+// Testimonials Section Component - Updated with blob decoration
 const TestimonialsSection = () => {
   return (
     <section className="testimonials-section">
@@ -46,6 +46,11 @@ const TestimonialsSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Decorative elements positioned around testimonials */}
+      <div className="decoration-blob"></div>
+      <div className="decoration-lines decoration-lines-left"></div>
+      <div className="decoration-lines decoration-lines-right"></div>
     </section>
   );
 };
