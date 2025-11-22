@@ -1,7 +1,21 @@
-// Navigation Component - EXACT COPY from homepage2.html
+import { useState, useEffect } from 'react';
+
+// Navigation Component with scroll background
 const Navigation = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Add background when scrolled more than 50px
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
       <div className="nav-menu">
         <div className="nav-dropdown">
           <a href="#solutions" className="dropdown-trigger">

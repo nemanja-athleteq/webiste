@@ -47,10 +47,8 @@ const TestimonialsSection = () => {
         </div>
       </div>
 
-      {/* Decorative elements positioned around testimonials */}
+      {/* Decorative blob */}
       <div className="decoration-blob"></div>
-      <div className="decoration-lines decoration-lines-left"></div>
-      <div className="decoration-lines decoration-lines-right"></div>
     </section>
   );
 };

@@ -2,6 +2,10 @@
 const CTASection = () => {
   return (
     <section className="cta-section">
+      {/* Decoration Lines */}
+      <div className="decoration-lines decoration-lines-left"></div>
+      <div className="decoration-lines decoration-lines-right"></div>
+
       <div className="cta-inner">
         <div className="cta-text-group">
           <h2>Join 2000+ Athletes, 50+ Clubs, 100+ Experts in the AthleteQ Ecosystem</h2>

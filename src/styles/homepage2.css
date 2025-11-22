@@ -38,10 +38,16 @@ h1, h2, h3, h4 {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 35px 120px;
+    padding: 20px 120px;
     gap: 40px;
     z-index: 100;
     background: transparent;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.navbar-scrolled {
+    background: rgba(12, 14, 13, 0.85);
+    backdrop-filter: blur(10px);
 }
 
 .nav-menu {
@@ -141,7 +147,7 @@ h1, h2, h3, h4 {
     color: var(--bg-dark);
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -285,7 +291,7 @@ h1, h2, h3, h4 {
     border-radius: 8px;
     color: var(--primary-green);
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     cursor: pointer;
     transition: background 0.3s, color 0.3s;
 }
@@ -727,14 +733,15 @@ h1, h2, h3, h4 {
 }
 
 .decoration-lines-left {
-    bottom: -500px;
+    top: 50%;
     left: -200px;
+    transform: translateY(-50%);
 }
 
 .decoration-lines-right {
-    bottom: -500px;
+    top: 50%;
     right: -200px;
-    transform: scaleX(-1);
+    transform: translateY(-50%) scaleX(-1);
 }
 
 /* CTA Section */
@@ -744,6 +751,7 @@ h1, h2, h3, h4 {
     align-items: center;
     justify-content: center;
     padding: 199px 0;
+    position: relative; /* For decoration lines positioning */
 }
 
 .cta-inner {
