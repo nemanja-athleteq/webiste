@@ -404,24 +404,40 @@ h1, h2, h3, h4 {
     right: -61px;
 }
 
-/* Slider Section */
+/* Slider Section - Sticky container for scroll-through slider */
 .slider-section {
-    min-height: 822px;
+    min-height: 400vh; /* 4 slides * 100vh = enough height to scroll through all slides */
+    position: relative;
+}
+
+.slider-sticky-wrapper {
+    position: sticky;
+    top: 0;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     padding: 120px;
-    position: relative;
+    overflow: hidden;
 }
 
-.slider-section::before {
-    content: '';
+.slider-background {
     position: absolute;
     inset: 0;
-    background: url('/assets/Slider Section.png') center/cover;
-    opacity: 0.53;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     z-index: 0;
+    will-change: opacity;
+}
+
+.slider-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 15, 15, 0.47);
+    z-index: 1;
+    pointer-events: none;
 }
 
 .slider-inner {
@@ -429,7 +445,83 @@ h1, h2, h3, h4 {
     width: 100%;
     padding: 0 120px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
+}
+
+.slider-inner h2 {
+    font-size: 30px;
+    line-height: 49px;
+    max-width: 445px;
+    will-change: opacity;
+}
+
+/* Slide 2 specific content */
+.slide-content-wrapper {
+    max-width: 530px;
+}
+
+.slide-heading {
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 43px;
+    color: white;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
+
+.slide-heading p {
+    margin: 0;
+}
+
+.slide-highlight {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    color: var(--primary-green);
+    margin-bottom: 28px;
+}
+
+.slide-highlight-list {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 29px;
+    color: var(--primary-green);
+    margin-bottom: 35px;
+}
+
+.slide-highlight-list p {
+    margin: 0;
+}
+
+.slide-highlight-paragraph {
+    font-family: 'Roboto', sans-serif;
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 30px;
+    color: var(--primary-green);
+    margin-bottom: 35px;
+}
+
+.slide-metrics {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.metric-badge {
+    display: inline;
+    background: var(--primary-green);
+    border: 1px solid var(--primary-green);
+    border-radius: 69px;
+    padding: 10px 36px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--bg-dark);
+    white-space: nowrap;
 }
 
 .ecosystem-title {
