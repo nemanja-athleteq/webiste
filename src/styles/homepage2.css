@@ -342,21 +342,11 @@ h1, h2, h3, h4 {
     position: relative;
 }
 
-/* .phone-container {
-    width: 269px;
-    height: 524px;
-    position: relative;
-    overflow: hidden;
+.phone-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.phone-container img {
-    width: 705px;
-    height: 705px;
-    position: absolute;
-    left: -216px;
-    top: -97px;
-    object-fit: cover;
-} */
 
 .ai-coach-content {
     max-width: 667px;
@@ -1018,6 +1008,271 @@ h1, h2, h3, h4 {
     color: var(--text-light-gray);
 }
 
+/* Phone Mockup with SVG Frame */
+.phone-mockup-wrapper {
+    width: 345px;
+    height: 620px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-svg-frame {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.chat-ui-overlay {
+    position: relative;
+    width: 85%;
+    height: 94%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 35px;
+}
+
+/* Status Bar */
+.phone-status-bar {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    position: relative;
+    z-index: 10;
+}
+
+.status-time {
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.status-icons {
+    display: flex;
+    gap: 3px;
+    font-size: 10px;
+}
+
+/* Chat Screen Overlay */
+.chat-screen-overlay {
+    flex: 1;
+    background: #0F0F0F;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Chat Header */
+.chat-header {
+    background: #2f2f2f;
+    padding: 12px 16px;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.coach-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.coach-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #555;
+}
+
+.coach-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.coach-details {
+    flex: 1;
+}
+
+.coach-details h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    text-transform: none;
+    line-height: 1.3;
+}
+
+.coach-subtitle {
+    font-size: 12px;
+    font-weight: 400;
+    color: #b0b0b0;
+}
+
+.online-status {
+    font-size: 12px;
+    color: #4ade80;
+    font-weight: 500;
+}
+
+/* Session Title */
+.session-title {
+    background: #262626;
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid #333333;
+}
+
+.session-name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #c7f043;
+    margin: 0 0 4px 0;
+    text-transform: none;
+}
+
+.session-time {
+    font-size: 11px;
+    color: #888;
+    margin: 0;
+}
+
+/* Chat Messages */
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #262626;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.message-athlete {
+    align-items: flex-end;
+}
+
+.message-coach {
+    align-items: flex-start;
+}
+
+.message-bubble {
+    max-width: 80%;
+    padding: 12px 14px;
+    border-radius: 16px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.message-athlete .message-bubble {
+    background: #3d3d3d;
+    color: #ffffff;
+    border-bottom-right-radius: 4px;
+}
+
+.message-coach .message-bubble {
+    background: #353535;
+    color: #e5e5e5;
+    border-bottom-left-radius: 4px;
+}
+
+.message-bubble p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.message-bubble p + p {
+    margin-top: 8px;
+}
+
+.message-meta {
+    font-size: 9px;
+    color: #888888;
+    padding: 0 8px;
+}
+
+/* Chat Input */
+.chat-input {
+    background: #2f2f2f;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-top: 1px solid #3a3a3a;
+}
+
+.chat-input input {
+    flex: 1;
+    background: #373737;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 16px;
+    color: #b0b0b0;
+    font-size: 12px;
+    outline: none;
+}
+
+.chat-input input::placeholder {
+    color: #707070;
+}
+
+.btn-send,
+.btn-mic {
+    width: 36px;
+    height: 36px;
+    background: #4a4a4a;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+    color: #b0b0b0;
+}
+
+.btn-send svg,
+.btn-mic svg {
+    width: 18px;
+    height: 18px;
+}
+
+.btn-send:hover,
+.btn-mic:hover {
+    background: #555;
+}
+
+/* Scrollbar styling */
+.chat-messages::-webkit-scrollbar {
+    width: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: #262626;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: #4a4a4a;
+    border-radius: 4px;
+}
+
 /* Responsive Design */
 @media (max-width: 1400px) {
     .hero-inner,
@@ -1138,4 +1393,278 @@ h1, h2, h3, h4 {
         font-size: 24px;
         line-height: 36px;
     }
+}
+
+/* ============================================
+   GLASSMORPHISM PHONE MOCKUP - FIGMA DESIGN
+   ============================================ */
+
+/* Chat Header - Glassmorphism */
+.chat-header-glass {
+    padding: 8px 12px;
+    margin: 16px 18px 0 18px;
+    background: rgba(126, 126, 126, 0.08);
+    backdrop-filter: blur(12.5px);
+    -webkit-backdrop-filter: blur(12.5px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+}
+
+.coach-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.coach-avatar-glass {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 0.8px solid rgba(255, 255, 255, 0.15);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.coach-avatar-glass img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.coach-info-glass {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.coach-name-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.coach-name {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.3px;
+}
+
+.coach-subtitle-inline {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: #71717b;
+}
+
+.online-status-glass {
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    color: #4ade80;
+    font-weight: 400;
+}
+
+/* Chat Messages - Glassmorphism */
+.chat-messages-glass {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 24px 14px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: transparent;
+}
+
+.message-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 85%;
+}
+
+.message-wrapper.message-athlete {
+    align-self: flex-end;
+    align-items: flex-end;
+}
+
+.message-wrapper.message-coach {
+    align-self: flex-start;
+    align-items: flex-start;
+}
+
+.message-bubble-glass {
+    padding: 10px 14px;
+    backdrop-filter: blur(12.5px);
+    -webkit-backdrop-filter: blur(12.5px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    max-width: 100%;
+}
+
+.message-bubble-glass.athlete {
+    background: rgba(125, 121, 121, 0.08);
+    border-radius: 16px 16px 4px 16px;
+}
+
+.message-bubble-glass.coach {
+    background: rgba(125, 121, 121, 0.35);
+    border-radius: 16px 16px 16px 4px;
+}
+
+.message-bubble-glass p {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #ffffff;
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.message-meta-glass {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    color: #afafaf;
+    padding: 0 4px;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 16px 20px;
+}
+
+.typing-indicator .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ffffff;
+    animation: typing 1.4s infinite;
+}
+
+.typing-indicator .dot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.typing-indicator .dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator .dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0%, 60%, 100% {
+        opacity: 0.3;
+        transform: translateY(0);
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(-4px);
+    }
+}
+
+/* Chat Input - Glassmorphism */
+.chat-input-glass {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 22px 16px 22px;
+    background: transparent;
+}
+
+.input-container-glass {
+    flex: 1;
+    position: relative;
+    background: rgba(34, 34, 36, 0.8);
+    border: 0.8px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    height: 42px;
+}
+
+.input-container-glass input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0 16px;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.input-container-glass input::placeholder {
+    color: #71717b;
+}
+
+.btn-send-glass {
+    position: absolute;
+    right: 6px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #71717b;
+    transition: color 0.2s;
+}
+
+.btn-send-glass:hover {
+    color: #ffffff;
+}
+
+.btn-send-glass svg {
+    width: 16px;
+    height: 16px;
+}
+
+.btn-mic-glass {
+    width: 42px;
+    height: 42px;
+    background: rgba(34, 34, 36, 0.8);
+    border: 0.8px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #71717b;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.btn-mic-glass:hover {
+    color: #ffffff;
+    background: rgba(42, 42, 44, 0.8);
+}
+
+.btn-mic-glass svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Scrollbar for Glass Messages */
+.chat-messages-glass::-webkit-scrollbar {
+    width: 4px;
+}
+
+.chat-messages-glass::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chat-messages-glass::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.chat-messages-glass::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
 }

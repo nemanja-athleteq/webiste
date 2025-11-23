@@ -1,10 +1,12 @@
+import AnimatedPhoneMockup from './AnimatedPhoneMockup';
+
 // AI Coach Section Component - EXACT COPY from homepage2.html
 const AICoachSection = () => {
   return (
     <section className="ai-coach-section">
       <div className="ai-coach-inner">
         <div className="phone-container">
-          <img src="/assets/Photo - Ai Coach Phone.png" alt="AI Coach Phone" />
+          <AnimatedPhoneMockup />
         </div>
         <div className="ai-coach-content">
           {/* Decorations */}
