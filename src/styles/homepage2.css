@@ -1332,6 +1332,19 @@ h1, h2, h3, h4 {
     .footer-inner {
         padding: 0 80px;
     }
+
+    .hero-inner {
+        gap: 60px; /* Reduce gap from 100px */
+    }
+
+    .hero-image {
+        width: 450px;
+        height: 480px;
+    }
+
+    .hero-content {
+        max-width: 480px;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -1343,6 +1356,20 @@ h1, h2, h3, h4 {
 
     .testimonials-grid {
         flex-wrap: wrap;
+    }
+
+    /* Hero optimizations for 1200px */
+    .hero-inner {
+        gap: 40px;
+    }
+
+    .hero-image {
+        width: 380px;
+        height: 400px;
+    }
+
+    .hero-content {
+        max-width: 450px;
     }
 }
 
@@ -1375,8 +1402,16 @@ h1, h2, h3, h4 {
 
     .hero-image {
         width: 100%;
-        max-width: 450px;
-        height: 480px;
+        max-width: 380px;
+        height: 400px;
+    }
+
+    .hero-title {
+        font-size: 30px;
+    }
+
+    .hero-description {
+        font-size: 18px;
     }
 
     .phone-container {
@@ -1427,6 +1462,12 @@ h1, h2, h3, h4 {
     .hero-buttons {
         flex-direction: column;
         width: 100%;
+        gap: 16px;
+    }
+
+    .hero-image {
+        max-width: 320px;
+        height: 340px;
     }
 
     .btn-primary,
