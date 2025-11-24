@@ -16,6 +16,7 @@ const Navigation = () => {
 
   return (
     <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
+      <div className="navbar-container">
       <div className="nav-menu">
         <div className="nav-dropdown">
           <a href="#solutions" className="dropdown-trigger">
@@ -45,6 +46,7 @@ const Navigation = () => {
           <path d="M6 21C6 17.6863 8.68629 15 12 15C15.3137 15 18 17.6863 18 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
         </svg>
       </button>
+      </div>
     </nav>
   );
 };
