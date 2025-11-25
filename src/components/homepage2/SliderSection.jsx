@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 const SliderSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [opacity, setOpacity] = useState(1);
+  const [blur, setBlur] = useState(0);
   const sectionRef = useRef(null);
 
   const slides = [
@@ -86,13 +87,15 @@ const SliderSection = () => {
         Math.floor(scrollProgress * slides.length)
       );
 
-      // If slide changed, fade out, change slide, then fade in
+      // If slide changed, blur + fade out, change slide, then fade in
       if (slideIndex !== currentSlide) {
         setOpacity(0);
+        setBlur(12);
         setTimeout(() => {
           setCurrentSlide(slideIndex);
+          setBlur(0);
           setOpacity(1);
-        }, 300);
+        }, 350);
       }
     };
 
@@ -112,8 +115,8 @@ const SliderSection = () => {
           style={{
             backgroundImage: `url(${slides[currentSlide].image})`,
             opacity: opacity,
-            transition: 'opacity 400ms ease-in-out',
-            filter: currentSlide === 0 ? 'grayscale(100%)' : 'none'
+            transition: 'opacity 450ms ease-out, filter 400ms ease-out',
+            filter: `blur(${blur}px)${currentSlide === 0 ? ' grayscale(100%)' : ''}`
           }}
         />
 
@@ -123,7 +126,8 @@ const SliderSection = () => {
           <div
             style={{
               opacity: opacity,
-              transition: 'opacity 400ms ease-in-out'
+              filter: `blur(${blur * 0.5}px)`,
+              transition: 'opacity 450ms ease-out, filter 350ms ease-out'
             }}
           >
             {slides[currentSlide].content}
