@@ -1,37 +1,75 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 // Realistic Phone Mockup matching Figma design with glassmorphism
 const AnimatedPhoneMockup = () => {
   const [messages, setMessages] = useState([]);
-  const [typingUser, setTypingUser] = useState(null); // 'athlete' or 'coach'
+  const [typingUser, setTypingUser] = useState(null); // 'coach' only now
   const [animationStep, setAnimationStep] = useState(0);
+  const [inputText, setInputText] = useState('');
+  const [isTypingInInput, setIsTypingInInput] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const typingIntervalRef = useRef(null);
+
+  // Typewriter effect function
+  const typeMessage = useCallback((text, onComplete) => {
+    let index = 0;
+    setIsTypingInInput(true);
+    setInputText('');
+
+    typingIntervalRef.current = setInterval(() => {
+      if (index < text.length) {
+        setInputText(text.slice(0, index + 1));
+        index++;
+      } else {
+        clearInterval(typingIntervalRef.current);
+        // Pause before "sending"
+        setTimeout(() => {
+          setIsSending(true);
+          setTimeout(() => {
+            setInputText('');
+            setIsTypingInInput(false);
+            setIsSending(false);
+            onComplete();
+          }, 300);
+        }, 500);
+      }
+    }, 55); // typing speed
+  }, []);
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      if (typingIntervalRef.current) {
+        clearInterval(typingIntervalRef.current);
+      }
+    };
+  }, []);
+
+  // Athlete messages data
+  const athleteMessages = [
+    { id: 1, text: "Big match tomorrow. Feeling nervous 😰", meta: "Today 09:15" },
+    { id: 3, text: "What should I focus on?", meta: "Today 09:17" },
+    { id: 5, text: "Thanks coach! Feeling better already 💚", meta: "Today 09:19" }
+  ];
 
   useEffect(() => {
     const runAnimation = () => {
-      // Step 0: Show athlete typing
+      // Step 0: Athlete types first message in input field
       if (animationStep === 0) {
         setMessages([]);
-        setTypingUser("athlete");
-        setTimeout(() => setAnimationStep(1), 1000);
-      }
-      // Step 1: Show first athlete message
-      else if (animationStep === 1) {
         setTypingUser(null);
-        setMessages([{
-          id: 1,
-          type: "athlete",
-          text: "Big match tomorrow. Feeling nervous 😰",
-          meta: "Today 09:15"
-        }]);
+        typeMessage(athleteMessages[0].text, () => {
+          setMessages([{ ...athleteMessages[0], type: "athlete" }]);
+          setTimeout(() => setAnimationStep(1), 800);
+        });
+      }
+      // Step 1: Show coach typing
+      else if (animationStep === 1) {
+        setTypingUser("coach");
         setTimeout(() => setAnimationStep(2), 1200);
       }
-      // Step 2: Show coach typing
+      // Step 2: Show coach response
       else if (animationStep === 2) {
-        setTypingUser("coach");
-        setTimeout(() => setAnimationStep(3), 1000);
-      }
-      // Step 3: Show coach response
-      else if (animationStep === 3) {
         setTypingUser(null);
         setMessages(prev => [...prev, {
           id: 2,
@@ -39,31 +77,22 @@ const AnimatedPhoneMockup = () => {
           text: "I see you're stressed. Let's work on that together 💪",
           meta: "Emma - Today 09:16"
         }]);
-        setTimeout(() => setAnimationStep(4), 1800);
+        setTimeout(() => setAnimationStep(3), 1500);
       }
-      // Step 4: Show athlete typing
+      // Step 3: Athlete types second message
+      else if (animationStep === 3) {
+        typeMessage(athleteMessages[1].text, () => {
+          setMessages(prev => [...prev, { ...athleteMessages[1], type: "athlete" }]);
+          setTimeout(() => setAnimationStep(4), 800);
+        });
+      }
+      // Step 4: Show coach typing
       else if (animationStep === 4) {
-        setTypingUser("athlete");
-        setTimeout(() => setAnimationStep(5), 1000);
-      }
-      // Step 5: Show athlete response
-      else if (animationStep === 5) {
-        setTypingUser(null);
-        setMessages(prev => [...prev, {
-          id: 3,
-          type: "athlete",
-          text: "What should I focus on?",
-          meta: "Today 09:17"
-        }]);
-        setTimeout(() => setAnimationStep(6), 1500);
-      }
-      // Step 6: Show coach typing
-      else if (animationStep === 6) {
         setTypingUser("coach");
-        setTimeout(() => setAnimationStep(7), 1200);
+        setTimeout(() => setAnimationStep(5), 1400);
       }
-      // Step 7: Show coach advice
-      else if (animationStep === 7) {
+      // Step 5: Show coach advice
+      else if (animationStep === 5) {
         setTypingUser(null);
         setMessages(prev => [...prev, {
           id: 4,
@@ -71,32 +100,23 @@ const AnimatedPhoneMockup = () => {
           text: "Breathing exercises and visualization. You've got this! 🎯",
           meta: "Emma - Today 09:18"
         }]);
-        setTimeout(() => setAnimationStep(8), 2000);
+        setTimeout(() => setAnimationStep(6), 1800);
       }
-      // Step 8: Show athlete typing
-      else if (animationStep === 8) {
-        setTypingUser("athlete");
-        setTimeout(() => setAnimationStep(9), 1000);
+      // Step 6: Athlete types final message
+      else if (animationStep === 6) {
+        typeMessage(athleteMessages[2].text, () => {
+          setMessages(prev => [...prev, { ...athleteMessages[2], type: "athlete" }]);
+          setTimeout(() => setAnimationStep(7), 1500);
+        });
       }
-      // Step 9: Show final athlete message
-      else if (animationStep === 9) {
-        setTypingUser(null);
-        setMessages(prev => [...prev, {
-          id: 5,
-          type: "athlete",
-          text: "Thanks coach! Feeling better already 💚",
-          meta: "Today 09:19"
-        }]);
-        setTimeout(() => setAnimationStep(10), 1500);
-      }
-      // Step 10: Pause before restart
-      else if (animationStep === 10) {
+      // Step 7: Pause before restart
+      else if (animationStep === 7) {
         setTimeout(() => setAnimationStep(0), 2500);
       }
     };
 
     runAnimation();
-  }, [animationStep]);
+  }, [animationStep, typeMessage]);
 
   return (
     <div className="phone-mockup-wrapper">
@@ -161,27 +181,16 @@ const AnimatedPhoneMockup = () => {
                 </div>
               </div>
             )}
-
-            {typingUser === "athlete" && (
-              <div className="message-wrapper message-athlete">
-                <div className="message-bubble-glass athlete typing-indicator">
-                  <span className="dot"></span>
-                  <span className="dot"></span>
-                  <span className="dot"></span>
-                </div>
-              </div>
-            )}
           </div>
 
           {/* Chat Input - Glassmorphism from Figma */}
-          <div className="chat-input-glass">
-            <div className="input-container-glass">
-              <input
-                type="text"
-                placeholder="Start typing your question..."
-                readOnly
-              />
-              <button className="btn-send-glass">
+          <div className={`chat-input-glass ${isTypingInInput ? 'is-typing' : ''}`}>
+            <div className={`input-container-glass ${isTypingInInput ? 'typing-active' : ''}`}>
+              <div className="input-text-display">
+                {inputText || (!isTypingInInput && <span className="input-placeholder">Start typing your question...</span>)}
+                {isTypingInInput && <span className="typing-cursor">|</span>}
+              </div>
+              <button className={`btn-send-glass ${isSending ? 'sending' : ''} ${inputText ? 'has-text' : ''}`}>
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                   <path
                     d="M16.5 1.5L8.25 9.75M16.5 1.5L11.25 16.5L8.25 9.75M16.5 1.5L1.5 6.75L8.25 9.75"

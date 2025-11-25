@@ -1675,6 +1675,17 @@ h1, h2, h3, h4 {
     background: transparent;
 }
 
+.chat-input-glass.is-typing .btn-mic-glass {
+    width: 0;
+    opacity: 0;
+    margin-left: -10px;
+    pointer-events: none;
+}
+
+.chat-input-glass .btn-mic-glass {
+    transition: width 0.3s ease, opacity 0.2s ease, margin 0.3s ease;
+}
+
 .input-container-glass {
     flex: 1;
     position: relative;
@@ -1723,6 +1734,71 @@ h1, h2, h3, h4 {
 .btn-send-glass svg {
     width: 16px;
     height: 16px;
+}
+
+/* Typewriter input styles */
+.input-text-display {
+    flex: 1;
+    padding: 0 16px;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+}
+
+.input-placeholder {
+    color: #71717b;
+}
+
+.typing-cursor {
+    color: #ffffff;
+    animation: blink-cursor 0.8s infinite;
+    font-weight: 300;
+    margin-left: 1px;
+}
+
+@keyframes blink-cursor {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+.input-container-glass.typing-active {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(40, 40, 42, 0.9);
+}
+
+.btn-send-glass.has-text {
+    color: #ffffff;
+}
+
+.btn-send-glass.sending {
+    color: #22c55e;
+    transform: scale(1.15);
+    transition: all 0.2s ease-out;
+}
+
+.btn-send-glass.sending svg {
+    animation: send-pulse 0.3s ease-out;
+}
+
+@keyframes send-pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2) translateX(2px);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .btn-mic-glass {
