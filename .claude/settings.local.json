@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where:*)",
+      "Bash(find:*)",
+      "WebFetch(domain:www.figma.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

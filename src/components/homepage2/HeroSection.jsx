@@ -1,4 +1,6 @@
 import { usePageLoadAnimation } from '../../hooks/usePageLoadAnimation';
+import useHeroMagnifyEffect from '../../hooks/useHeroMagnifyEffect';
+import useHeroSpotlightEffect from '../../hooks/useHeroSpotlightEffect';
 
 // Hero Section Component with Page Load Animations
 const HeroSection = () => {
@@ -13,6 +15,12 @@ const HeroSection = () => {
     secondaryBtnRef,
     heroImageRef,
   } = usePageLoadAnimation();
+
+  // OPTION A: Apply magnify lupa effect to hero image (mask div stays fixed, image moves)
+  useHeroMagnifyEffect(heroSectionRef, heroImageRef);
+
+  // OPTION B: Apply spotlight effect to hero background (spotlight follows mouse)
+  useHeroSpotlightEffect(heroSectionRef, backgroundRef);
 
   return (
     <section ref={heroSectionRef} className="hero-section">
