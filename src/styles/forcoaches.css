@@ -1047,9 +1047,9 @@
     position: absolute;
     width: 663px;
     height: 720px;
-    right: 0;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 0;
     opacity: 0.8;
