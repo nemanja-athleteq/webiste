@@ -3,7 +3,12 @@ const CTASection = () => {
   return (
     <section className="coaches-cta-section">
       {/* Decorative blob background */}
-      <div className="cta-blob-decoration"></div>
+      <img
+        src="/assets/decoration-blob.svg"
+        alt=""
+        className="cta-blob-decoration"
+        aria-hidden="true"
+      />
 
       <div className="coaches-cta-inner">
         {/* Header */}

@@ -1047,20 +1047,12 @@
     position: absolute;
     width: 663px;
     height: 720px;
-    left: 50%;
+    right: 0;
     top: 50%;
-    transform: translate(-30%, -40%);
-    background: radial-gradient(
-        ellipse at center,
-        rgba(120, 140, 60, 0.25) 0%,
-        rgba(100, 120, 40, 0.15) 30%,
-        rgba(80, 100, 30, 0.08) 50%,
-        transparent 70%
-    );
-    border-radius: 50% 40% 60% 50%;
-    filter: blur(60px);
+    transform: translateY(-50%);
     pointer-events: none;
     z-index: 0;
+    opacity: 0.8;
 }
 
 .coaches-cta-inner {
@@ -1152,7 +1144,7 @@
 
     .cta-blob-decoration {
         width: 500px;
-        height: 500px;
+        height: auto;
     }
 }
 
@@ -1179,7 +1171,7 @@
 
     .cta-blob-decoration {
         width: 350px;
-        height: 350px;
-        filter: blur(40px);
+        height: auto;
+        opacity: 0.6;
     }
 }
