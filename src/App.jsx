@@ -1,4 +1,7 @@
-// Main App Component - Combines all homepage2 sections
+// Main App Component with Routing
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+// Homepage components
 import Navigation from './components/homepage2/Navigation'
 import HeroSection from './components/homepage2/HeroSection'
 import AICoachSection from './components/homepage2/AICoachSection'
@@ -9,8 +12,11 @@ import CTASection from './components/homepage2/CTASection'
 import Footer from './components/homepage2/Footer'
 import useHomepage2Effects from './hooks/useHomepage2Effects'
 
-function App() {
-  // Apply all JavaScript effects from original homepage2.js
+// For Coaches page
+import ForCoachesPage from './components/forcoaches/ForCoachesPage'
+
+// Homepage Component
+function HomePage() {
   useHomepage2Effects();
 
   return (
@@ -24,6 +30,17 @@ function App() {
       <CTASection />
       <Footer />
     </>
+  )
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/for-coaches" element={<ForCoachesPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

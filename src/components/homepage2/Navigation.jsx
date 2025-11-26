@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 // Navigation Component with scroll background
 const Navigation = () => {
@@ -28,7 +29,7 @@ const Navigation = () => {
           <div className="dropdown-menu">
             <a href="#clubs">For Clubs</a>
             <a href="#athletes">For Athletes</a>
-            <a href="#coaches">For Coaches</a>
+            <Link to="/for-coaches">For Coaches</Link>
             <a href="#parents">For Parents</a>
             <a href="#experts">For Experts</a>
           </div>

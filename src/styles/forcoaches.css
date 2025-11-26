@@ -1,0 +1,229 @@
+/* ============================================
+   FOR COACHES PAGE STYLES
+   ============================================ */
+
+/* Hero Section */
+.coaches-hero-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.coaches-hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.coaches-hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center right;
+    filter: grayscale(100%);
+    opacity: 0.6;
+}
+
+.coaches-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(15, 15, 15, 0.95) 0%,
+        rgba(15, 15, 15, 0.85) 40%,
+        rgba(15, 15, 15, 0.4) 70%,
+        rgba(15, 15, 15, 0.2) 100%
+    );
+}
+
+.coaches-hero-inner {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 120px 120px 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.coaches-hero-content {
+    max-width: 800px;
+}
+
+.coaches-hero-title {
+    font-family: 'Movatif', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-white);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.coaches-hero-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    color: var(--text-white);
+    max-width: 661px;
+    margin-bottom: 32px;
+}
+
+.coaches-hero-buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 48px;
+}
+
+.coaches-button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.coaches-button-group .btn-primary {
+    padding: 14px 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.button-subtext {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-gray);
+    padding-left: 4px;
+}
+
+.coaches-trusted-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.coaches-trusted-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-white);
+    margin: 0;
+}
+
+/* Reusing club-logos from homepage2.css but with coaches-specific adjustments */
+.coaches-hero-section .club-logos {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.coaches-hero-section .club-logos img,
+.coaches-hero-section .club-logos .club-logo-svg {
+    width: 79px;
+    height: 79px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: opacity 0.3s, filter 0.3s, transform 0.3s;
+}
+
+.coaches-hero-section .club-logos img:hover,
+.coaches-hero-section .club-logos .club-logo-svg:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+    .coaches-hero-inner {
+        padding: 120px 80px 80px;
+    }
+
+    .coaches-hero-title {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .coaches-hero-title {
+        font-size: 34px;
+    }
+
+    .coaches-hero-content {
+        max-width: 650px;
+    }
+}
+
+@media (max-width: 968px) {
+    .coaches-hero-inner {
+        padding: 100px 40px 60px;
+    }
+
+    .coaches-hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .coaches-hero-title {
+        font-size: 30px;
+    }
+
+    .coaches-hero-description {
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+    .coaches-hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coaches-button-group {
+        align-items: center;
+    }
+
+    .coaches-trusted-section {
+        align-items: center;
+    }
+
+    .coaches-hero-section .club-logos {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .coaches-hero-bg-img {
+        object-position: center center;
+    }
+
+    .coaches-hero-overlay {
+        background: linear-gradient(
+            to bottom,
+            rgba(15, 15, 15, 0.9) 0%,
+            rgba(15, 15, 15, 0.7) 50%,
+            rgba(15, 15, 15, 0.5) 100%
+        );
+    }
+}
+
+@media (max-width: 640px) {
+    .coaches-hero-title {
+        font-size: 26px;
+    }
+
+    .coaches-hero-description {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .coaches-hero-section .club-logos img,
+    .coaches-hero-section .club-logos .club-logo-svg {
+        width: 60px;
+        height: 60px;
+    }
+}
