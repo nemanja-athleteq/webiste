@@ -4,6 +4,7 @@ import HeroSection from './HeroSection'
 import ProblemSection from './ProblemSection'
 import SolutionSection from './SolutionSection'
 import SuccessStorySection from './SuccessStorySection'
+import FAQSection from './FAQSection'
 import Footer from '../homepage2/Footer'
 import '../../styles/forcoaches.css'
 
@@ -15,6 +16,7 @@ const ForCoachesPage = () => {
       <ProblemSection />
       <SolutionSection />
       <SuccessStorySection />
+      <FAQSection />
       <Footer />
     </>
   );
