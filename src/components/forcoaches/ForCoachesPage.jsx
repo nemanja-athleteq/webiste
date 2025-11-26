@@ -2,6 +2,7 @@
 import Navigation from '../homepage2/Navigation'
 import HeroSection from './HeroSection'
 import ProblemSection from './ProblemSection'
+import SolutionSection from './SolutionSection'
 import Footer from '../homepage2/Footer'
 import '../../styles/forcoaches.css'
 
@@ -11,6 +12,7 @@ const ForCoachesPage = () => {
       <Navigation />
       <HeroSection />
       <ProblemSection />
+      <SolutionSection />
       <Footer />
     </>
   );
