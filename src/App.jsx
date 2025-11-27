@@ -15,6 +15,9 @@ import useHomepage2Effects from './hooks/useHomepage2Effects'
 // For Coaches page
 import ForCoachesPage from './components/forcoaches/ForCoachesPage'
 
+// For Athletes page
+import ForAthletesPage from './components/forathletes/ForAthletesPage'
+
 // Homepage Component
 function HomePage() {
   useHomepage2Effects();
@@ -39,6 +42,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/for-coaches" element={<ForCoachesPage />} />
+        <Route path="/for-athletes" element={<ForAthletesPage />} />
       </Routes>
     </BrowserRouter>
   )
