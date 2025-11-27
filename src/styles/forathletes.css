@@ -627,3 +627,196 @@
     font-size: 18px;
   }
 }
+
+/* ===========================================
+   SUCCESS STORY SECTION (Section 4)
+   =========================================== */
+
+.athletes-success-section {
+  width: 100%;
+  padding: 92px 0 0;
+  background-color: #0f0f0f;
+}
+
+.athletes-success-inner {
+  max-width: 1512px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 92px;
+}
+
+.athletes-success-title {
+  font-family: 'Movatif', 'Druk Wide Bold', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  max-width: 685px;
+}
+
+.athletes-success-content {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* Left - Athlete Image */
+.athletes-success-image {
+  flex-shrink: 0;
+  width: 652px;
+  height: 520px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.athletes-success-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(100%);
+  mix-blend-mode: luminosity;
+}
+
+/* Right - Timeline Content */
+.athletes-success-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.timeline-block {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.timeline-title {
+  font-family: 'Movatif', 'Druk Wide Bold', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline-content p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #9c9c9c;
+  margin: 0;
+}
+
+.timeline-divider {
+  width: 297px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-top: 0;
+}
+
+/* CTA Button */
+.athletes-success-section .btn-primary {
+  background-color: #c7f043;
+  border: none;
+  border-radius: 8px;
+  padding: 4px 24px;
+  height: 47px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #0f0f0f;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+  text-transform: capitalize;
+  margin-top: 8px;
+}
+
+.athletes-success-section .btn-primary:hover {
+  background-color: #d4f55a;
+  transform: translateY(-2px);
+}
+
+/* Success Story Section Responsive */
+@media (max-width: 1200px) {
+  .athletes-success-content {
+    gap: 40px;
+    padding: 0 60px;
+  }
+
+  .athletes-success-image {
+    width: 500px;
+    height: 420px;
+  }
+}
+
+@media (max-width: 968px) {
+  .athletes-success-section {
+    padding: 60px 0 0;
+  }
+
+  .athletes-success-inner {
+    gap: 48px;
+  }
+
+  .athletes-success-title {
+    font-size: 26px;
+    padding: 0 40px;
+  }
+
+  .athletes-success-content {
+    flex-direction: column;
+    padding: 0 40px;
+  }
+
+  .athletes-success-image {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+  }
+
+  .athletes-success-timeline {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .timeline-divider {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .athletes-success-title {
+    font-size: 22px;
+    padding: 0 20px;
+  }
+
+  .athletes-success-content {
+    padding: 0 20px;
+  }
+
+  .athletes-success-image {
+    height: 320px;
+  }
+
+  .timeline-title {
+    font-size: 18px;
+  }
+
+  .timeline-content p {
+    font-size: 15px;
+  }
+}
