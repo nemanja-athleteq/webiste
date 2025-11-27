@@ -820,3 +820,184 @@
     font-size: 15px;
   }
 }
+
+/* ===========================================
+   FAQ SECTION (Section 5)
+   =========================================== */
+
+.athletes-faq-section {
+  width: 100%;
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #0f0f0f;
+}
+
+.athletes-faq-inner {
+  max-width: 814px;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.athletes-faq-section .faq-title {
+  font-family: 'Movatif', 'Druk Wide Bold', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.4;
+  max-width: 685px;
+  margin: 0;
+}
+
+.athletes-faq-section .faq-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.athletes-faq-section .faq-item {
+  width: 100%;
+  background: rgba(125, 121, 121, 0.05);
+  backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.athletes-faq-section .faq-item:hover {
+  background: rgba(125, 121, 121, 0.08);
+}
+
+.athletes-faq-section .faq-item-open {
+  background: rgba(125, 121, 121, 0.1);
+}
+
+.athletes-faq-section .faq-question-btn {
+  width: 100%;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.athletes-faq-section .faq-question {
+  font-family: 'Movatif', 'Druk Wide Bold', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.athletes-faq-section .faq-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  background: #141414;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.athletes-faq-section .faq-plus-icon {
+  color: #c7f043;
+  transition: transform 0.3s ease;
+}
+
+.athletes-faq-section .faq-plus-icon.rotated {
+  transform: rotate(45deg);
+}
+
+.athletes-faq-section .faq-answer-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.athletes-faq-section .faq-item-open .faq-answer-wrapper {
+  max-height: 200px;
+}
+
+.athletes-faq-section .faq-answer {
+  padding: 0 24px 24px 24px;
+}
+
+.athletes-faq-section .faq-answer p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #9c9c9c;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* FAQ Responsive */
+@media (max-width: 968px) {
+  .athletes-faq-section .faq-title {
+    font-size: 26px;
+  }
+
+  .athletes-faq-section .faq-question {
+    font-size: 17px;
+  }
+
+  .athletes-faq-section .faq-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .athletes-faq-section .faq-plus-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .athletes-faq-section {
+    padding: 60px 0;
+  }
+
+  .athletes-faq-section .faq-title {
+    font-size: 22px;
+  }
+
+  .athletes-faq-section .faq-question {
+    font-size: 15px;
+  }
+
+  .athletes-faq-section .faq-question-btn {
+    padding: 16px 18px;
+    gap: 12px;
+  }
+
+  .athletes-faq-section .faq-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .athletes-faq-section .faq-plus-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .athletes-faq-section .faq-answer {
+    padding: 0 18px 18px 18px;
+  }
+
+  .athletes-faq-section .faq-list {
+    gap: 12px;
+  }
+}
