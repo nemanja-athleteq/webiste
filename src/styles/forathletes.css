@@ -417,3 +417,213 @@
     line-height: 24px;
   }
 }
+
+/* ===========================================
+   SOLUTION SECTION (Section 3) - How AthleteQ Solves This
+   =========================================== */
+
+.athletes-solution-section {
+  width: 100%;
+  padding: 92px 0 0;
+  background-color: #0f0f0f;
+}
+
+.athletes-solution-inner {
+  max-width: 1512px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 92px;
+  padding: 0 120px;
+}
+
+.athletes-solution-title {
+  font-family: 'Movatif', 'Druk Wide Bold', sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 45px;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+}
+
+.athletes-solution-content {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Phone Mockup Container */
+.athletes-solution-phone {
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Text Content */
+.athletes-solution-text {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 500px;
+}
+
+.solution-feature {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.solution-feature-title {
+  font-family: 'Movatif', 'Druk Wide Bold', sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 29px;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.solution-feature-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.solution-highlight {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 29px;
+  color: #c7f043;
+  margin: 0;
+}
+
+.solution-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 29px;
+  color: #c1c1c1;
+  margin: 0;
+}
+
+.solution-block {
+  margin-top: 20px;
+}
+
+.solution-block .solution-label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 29px;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Footer with checkmarks and CTA */
+.solution-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.solution-checkmarks {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.solution-check {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 29px;
+  color: #c7f043;
+  margin: 0;
+}
+
+.athletes-solution-section .btn-primary {
+  background-color: #c7f043;
+  border: none;
+  border-radius: 8px;
+  padding: 4px 24px;
+  height: 47px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #0f0f0f;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+  text-transform: capitalize;
+}
+
+.athletes-solution-section .btn-primary:hover {
+  background-color: #d4f55a;
+  transform: translateY(-2px);
+}
+
+/* Solution Section Responsive */
+@media (max-width: 1200px) {
+  .athletes-solution-inner {
+    padding: 0 60px;
+  }
+
+  .athletes-solution-content {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 968px) {
+  .athletes-solution-section {
+    padding: 60px 0 0;
+  }
+
+  .athletes-solution-inner {
+    padding: 0 40px;
+    gap: 48px;
+  }
+
+  .athletes-solution-title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .athletes-solution-content {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .athletes-solution-phone {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .athletes-solution-text {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .solution-checkmarks {
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .athletes-solution-inner {
+    padding: 0 20px;
+  }
+
+  .athletes-solution-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .solution-feature-title {
+    font-size: 18px;
+  }
+}
