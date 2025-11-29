@@ -1,0 +1,1754 @@
+/* ============================================
+   FOR CLUBS PAGE STYLES
+   ============================================ */
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.clubs-hero-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bg-dark);
+}
+
+.clubs-hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.clubs-hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 45%;
+    opacity: 0.29;
+}
+
+.clubs-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(15, 15, 15, 0.3) 0%,
+        rgba(15, 15, 15, 0.5) 50%,
+        rgba(15, 15, 15, 0.95) 85%,
+        rgba(15, 15, 15, 1) 100%
+    );
+}
+
+.clubs-hero-inner {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 120px 150px 60px;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.clubs-hero-content {
+    max-width: 700px;
+}
+
+.clubs-hero-title {
+    font-family: 'Movatif', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 49px;
+    color: var(--text-white);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.clubs-hero-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    color: var(--text-white);
+    max-width: 661px;
+    margin-bottom: 32px;
+}
+
+.clubs-hero-buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 48px;
+}
+
+.clubs-hero-buttons .btn-primary {
+    padding: 14px 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: var(--primary-green);
+    color: var(--bg-dark);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.clubs-hero-buttons .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(199, 240, 67, 0.3);
+}
+
+.clubs-hero-buttons .btn-outline {
+    padding: 14px 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: transparent;
+    color: var(--primary-green);
+    border: 1px solid var(--primary-green);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.clubs-hero-buttons .btn-outline:hover {
+    background-color: rgba(199, 240, 67, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Badge */
+.clubs-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--primary-green);
+    border: 1px solid var(--primary-green);
+    border-radius: 69px;
+    padding: 10px 16px;
+}
+
+.clubs-badge-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--bg-dark);
+}
+
+/* Partner Logos Strip */
+.clubs-partner-logos {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+}
+
+.clubs-partner-logos-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - HERO
+   ============================================ */
+
+/* 2K and larger screens */
+@media (min-width: 2000px) {
+    .clubs-hero-bg-img {
+        object-position: center 40%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .clubs-hero-inner {
+        padding: 120px 80px 60px;
+    }
+
+    .clubs-hero-title {
+        font-size: 32px;
+        line-height: 45px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .clubs-hero-title {
+        font-size: 30px;
+        line-height: 42px;
+    }
+
+    .clubs-hero-content {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 968px) {
+    .clubs-hero-inner {
+        padding: 100px 40px 40px;
+    }
+
+    .clubs-hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .clubs-hero-title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .clubs-hero-description {
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+    .clubs-hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clubs-badge {
+        display: flex;
+        justify-content: center;
+    }
+
+    .clubs-hero-bg-img {
+        object-position: center center;
+    }
+
+    .clubs-hero-overlay {
+        background: linear-gradient(
+            to bottom,
+            rgba(15, 15, 15, 0.5) 0%,
+            rgba(15, 15, 15, 0.7) 50%,
+            rgba(15, 15, 15, 0.95) 85%,
+            rgba(15, 15, 15, 1) 100%
+        );
+    }
+}
+
+@media (max-width: 640px) {
+    .clubs-hero-inner {
+        padding: 90px 20px 30px;
+    }
+
+    .clubs-hero-title {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .clubs-hero-description {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .clubs-hero-buttons {
+        width: 100%;
+    }
+
+    .clubs-hero-buttons .btn-primary,
+    .clubs-hero-buttons .btn-outline {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .clubs-badge {
+        padding: 8px 12px;
+    }
+
+    .clubs-badge-text {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+/* ============================================
+   PROBLEM/SOLUTION SECTION
+   ============================================ */
+
+.clubs-problem-solution-section {
+    width: 100%;
+    padding: 169px 181px;
+    background-color: var(--bg-dark);
+}
+
+.clubs-problem-solution-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 92px;
+    align-items: center;
+}
+
+/* Section Header */
+.clubs-section-header {
+    text-align: center;
+    max-width: 910px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.clubs-section-title {
+    font-family: 'Movatif', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 45px;
+    color: var(--text-white);
+    margin: 0;
+}
+
+.clubs-section-subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    color: #c1c1c1;
+    margin: 0;
+}
+
+/* Comparison Container - NO gap between blocks */
+.clubs-comparison-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1149px;
+    width: 1149px;
+}
+
+/* Comparison Blocks */
+.clubs-comparison-block {
+    display: flex;
+    align-items: flex-start;
+}
+
+.clubs-problem-block {
+    justify-content: flex-start;
+    gap: 135px;
+    align-items: center;
+}
+
+.clubs-solution-block {
+    justify-content: flex-end;
+    gap: 140px;
+    align-items: center;
+}
+
+.clubs-comparison-image {
+    flex-shrink: 0;
+    width: 573px;
+    height: 373px;
+    overflow: hidden;
+}
+
+.clubs-comparison-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.78;
+    mix-blend-mode: luminosity;
+}
+
+.clubs-comparison-content {
+    max-width: 380px;
+}
+
+.clubs-comparison-title {
+    font-family: 'Movatif', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 20px;
+}
+
+.clubs-solution-title {
+    color: var(--text-white);
+}
+
+.clubs-comparison-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.clubs-comparison-list li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 29px;
+    color: #c1c1c1;
+    padding-left: 16px;
+    position: relative;
+}
+
+.clubs-comparison-list li::before {
+    content: '-';
+    position: absolute;
+    left: 0;
+    color: #c1c1c1;
+}
+
+.clubs-solution-list li::before {
+    content: '-';
+    color: var(--primary-green);
+}
+
+.clubs-solution-list li {
+    color: #c1c1c1;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - PROBLEM/SOLUTION
+   ============================================ */
+
+@media (max-width: 1400px) {
+    .clubs-problem-solution-section {
+        padding: 120px 80px;
+    }
+
+    .clubs-problem-solution-inner {
+        gap: 70px;
+    }
+
+    .clubs-comparison-image {
+        width: 480px;
+        height: 320px;
+    }
+
+    .clubs-problem-block {
+        gap: 60px;
+    }
+
+    .clubs-solution-block {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .clubs-comparison-container {
+        gap: 40px;
+    }
+
+    .clubs-comparison-block {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .clubs-problem-block,
+    .clubs-solution-block {
+        gap: 30px;
+    }
+
+    .clubs-solution-block {
+        flex-direction: column-reverse;
+    }
+
+    .clubs-comparison-image {
+        width: 100%;
+        max-width: 573px;
+        height: 350px;
+    }
+
+    .clubs-comparison-content {
+        max-width: 100%;
+        padding-top: 0;
+    }
+
+    .clubs-comparison-list {
+        align-items: center;
+    }
+
+    .clubs-section-title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 968px) {
+    .clubs-problem-solution-section {
+        padding: 80px 40px;
+    }
+
+    .clubs-problem-solution-inner {
+        gap: 50px;
+    }
+
+    .clubs-section-header {
+        gap: 20px;
+    }
+
+    .clubs-section-title {
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    .clubs-section-subtitle {
+        font-size: 18px;
+    }
+
+    .clubs-comparison-title {
+        font-size: 22px;
+    }
+
+    .clubs-comparison-image {
+        height: 280px;
+    }
+}
+
+@media (max-width: 640px) {
+    .clubs-problem-solution-section {
+        padding: 60px 20px;
+    }
+
+    .clubs-problem-solution-inner {
+        gap: 40px;
+    }
+
+    .clubs-section-header {
+        gap: 16px;
+    }
+
+    .clubs-section-title {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .clubs-section-subtitle {
+        font-size: 16px;
+    }
+
+    .clubs-comparison-title {
+        font-size: 20px;
+    }
+
+    .clubs-comparison-list li {
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+    .clubs-comparison-image {
+        height: 220px;
+    }
+}
+
+/* ============================================
+   CAPABILITIES SECTION
+   ============================================ */
+
+.clubs-capabilities-section {
+    width: 100%;
+    padding: 120px 181px;
+    background-color: var(--bg-dark);
+}
+
+.clubs-capabilities-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Left Side - Header */
+.clubs-capabilities-header {
+    flex: 1.4;
+    max-width: 454px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+/* Horizontal line from title to connector */.clubs-capabilities-header::after {    content: '';    position: absolute;    right: -40px;    top: 50%;    width: 100px;    height: 1px;    background-color: white;}
+
+.clubs-capabilities-title {
+    font-family: 'Movatif', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 45px;
+    color: var(--text-white);
+    margin-bottom: 24px;
+    text-transform: none;
+}
+
+.clubs-capabilities-subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    color: #c1c1c1;
+    margin: 0;
+}
+
+/* SVG Connector Column */
+.clubs-capabilities-connector {
+    width: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.clubs-capabilities-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+/* Right Side - Capabilities List */
+.clubs-capabilities-list {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* Individual capability item */
+.clubs-capability-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Capability content */
+.clubs-capability-content {
+    max-width: 405px;
+}
+
+.clubs-capability-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 29px;
+    color: var(--primary-green);
+    margin-bottom: 8px;
+    text-transform: none;
+}
+
+.clubs-capability-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 29px;
+    color: #c1c1c1;
+    margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - CAPABILITIES
+   ============================================ */
+
+@media (max-width: 1400px) {
+    .clubs-capabilities-section {
+        padding: 100px 80px;
+    }
+
+    .clubs-capabilities-inner {
+        gap: 60px;
+    }
+
+    .clubs-capabilities-header {
+        max-width: 380px;
+    }
+
+    .clubs-capabilities-title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+/* Horizontal line from title to connector */.clubs-capabilities-header::after {    content: '';    position: absolute;    right: -40px;    top: 50%;    width: 100px;    height: 1px;    background-color: white;}
+
+@media (max-width: 1200px) {
+    .clubs-capabilities-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .clubs-capabilities-connector {
+        display: none;
+    }
+
+    .clubs-capabilities-header {
+        max-width: 600px;
+        margin-bottom: 40px;
+    }
+
+    .clubs-capabilities-list {
+        padding-left: 20px;
+    }
+
+    .clubs-capability-item {
+        padding-left: 16px;
+        border-left: 2px solid var(--primary-green);
+    }
+
+    .clubs-capability-content {
+        text-align: left;
+    }
+}
+/* Horizontal line from title to connector */.clubs-capabilities-header::after {    content: '';    position: absolute;    right: -40px;    top: 50%;    width: 100px;    height: 1px;    background-color: white;}
+
+@media (max-width: 968px) {
+    .clubs-capabilities-section {
+        padding: 80px 40px;
+    }
+
+    .clubs-capabilities-title {
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    .clubs-capabilities-subtitle {
+        font-size: 18px;
+    }
+
+    .clubs-capabilities-list {
+        gap: 40px;
+    }
+
+    .clubs-capability-title {
+        font-size: 18px;
+    }
+
+    .clubs-capability-description {
+        font-size: 15px;
+        line-height: 26px;
+    }
+}
+
+@media (max-width: 640px) {
+    .clubs-capabilities-section {
+        padding: 60px 20px;
+    }
+
+    .clubs-capabilities-title {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .clubs-capabilities-subtitle {
+        font-size: 16px;
+    }
+
+    .clubs-capabilities-list {
+        padding-left: 0;
+    }
+
+    .clubs-capability-item {
+        padding-left: 16px;
+        border-left: 3px solid var(--primary-green);
+    }
+
+    .clubs-capability-content {
+        max-width: 100%;
+    }
+}
+
+/* ============================================
+   INVESTMENT SECTION
+   ============================================ */
+
+.clubs-investment-section {
+    width: 100%;
+    padding: 120px 181px;
+    background-color: var(--bg-dark);
+}
+
+.clubs-investment-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Header */
+.clubs-investment-header {
+    text-align: center;
+    max-width: 700px;
+}
+
+.clubs-investment-title {
+    font-family: 'Movatif', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 45px;
+    color: var(--text-white);
+    margin-bottom: 24px;
+}
+
+.clubs-investment-subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    color: #c1c1c1;
+    margin: 0;
+}
+
+/* Cards Container */
+.clubs-investment-cards {
+    display: flex;
+    gap: 52px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Individual Card */
+.clubs-investment-card {
+    background-color: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    width: 539px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.clubs-card-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #c1c1c1;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.clubs-card-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    margin-bottom: 40px;
+}
+
+.clubs-risk-title {
+    color: #ff6b6b;
+}
+
+.clubs-prevention-title {
+    color: var(--primary-green);
+}
+
+/* Card List */
+.clubs-card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.clubs-card-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.clubs-card-item:last-child {
+    border-bottom: none;
+}
+
+.clubs-item-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 29px;
+    color: #c1c1c1;
+}
+
+.clubs-item-value {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 29px;
+    color: var(--text-white);
+}
+
+/* Card Total */
+.clubs-card-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.clubs-total-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 29px;
+    color: var(--text-white);
+}
+
+.clubs-total-value {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 29px;
+}
+
+.clubs-risk-value {
+    color: #ff6b6b;
+}
+
+.clubs-prevention-value {
+    color: var(--primary-green);
+}
+
+/* Conclusion Text */
+.clubs-investment-conclusion {
+    text-align: center;
+}
+
+.clubs-conclusion-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: var(--text-white);
+    margin: 0 0 8px 0;
+}
+
+.clubs-conclusion-highlight {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--primary-green);
+    font-style: italic;
+    margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - INVESTMENT
+   ============================================ */
+
+@media (max-width: 1400px) {
+    .clubs-investment-section {
+        padding: 100px 80px;
+    }
+
+    .clubs-investment-cards {
+        gap: 30px;
+    }
+
+    .clubs-investment-card {
+        width: 480px;
+        padding: 32px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .clubs-investment-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clubs-investment-card {
+        width: 100%;
+        max-width: 539px;
+    }
+
+    .clubs-investment-title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 968px) {
+    .clubs-investment-section {
+        padding: 80px 40px;
+    }
+
+    .clubs-investment-inner {
+        gap: 40px;
+    }
+
+    .clubs-investment-title {
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    .clubs-investment-subtitle {
+        font-size: 18px;
+    }
+
+    .clubs-investment-card {
+        padding: 24px;
+    }
+
+    .clubs-card-title {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    .clubs-conclusion-text,
+    .clubs-conclusion-highlight {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 640px) {
+    .clubs-investment-section {
+        padding: 60px 20px;
+    }
+
+    .clubs-investment-title {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .clubs-investment-subtitle {
+        font-size: 16px;
+    }
+
+    .clubs-investment-card {
+        padding: 20px;
+    }
+
+    .clubs-card-title {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+
+    .clubs-item-label,
+    .clubs-item-value {
+        font-size: 14px;
+    }
+
+    .clubs-total-label,
+    .clubs-total-value {
+        font-size: 16px;
+    }
+
+    .clubs-conclusion-text,
+    .clubs-conclusion-highlight {
+        font-size: 16px;
+    }
+}
+
+
+/* ============================================
+   TIMELINE SECTION - STAIRCASE PROGRESS
+   ============================================ */
+
+.clubs-timeline-section {
+    width: 100%;
+    padding: 120px 181px;
+    background-color: var(--bg-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+.clubs-timeline-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Left Side - Header */
+.clubs-timeline-header {
+    flex-shrink: 0;
+    width: 400px;
+}
+
+.clubs-timeline-title {
+    font-family: 'Movatif', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 45px;
+    color: var(--text-white);
+    margin-bottom: 24px;
+}
+
+.clubs-timeline-subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    color: #a2a1a1;
+    margin: 0;
+}
+
+/* Right Side - Staircase Steps */
+.clubs-timeline-steps {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Step Card - Glass morphism */
+.clubs-step-card {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 28px 32px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.clubs-step-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(199, 240, 67, 0.2);
+    transform: translateX(8px);
+}
+
+/* Staircase offset - subtle */
+.clubs-step-1 {
+    margin-left: 0;
+}
+
+.clubs-step-2 {
+    margin-left: 40px;
+}
+
+.clubs-step-3 {
+    margin-left: 80px;
+}
+
+/* Spotlight gradient behind number */
+.clubs-step-spotlight {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(199, 240, 67, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.clubs-step-card:hover .clubs-step-spotlight {
+    opacity: 1;
+}
+
+/* Step Number */
+.clubs-step-number {
+    font-family: 'Movatif', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.08);
+    line-height: 1;
+    flex-shrink: 0;
+    min-width: 70px;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.clubs-step-card:hover .clubs-step-number {
+    color: rgba(199, 240, 67, 0.25);
+}
+
+/* Step Content */
+.clubs-step-content {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.clubs-step-header {
+    margin-bottom: 10px;
+}
+
+.clubs-step-week {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary-green);
+    display: block;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.clubs-step-title {
+    font-family: 'Movatif', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-white);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.clubs-step-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #a0a0a0;
+    margin-bottom: 14px;
+    max-width: 300px;
+}
+
+.clubs-step-checkmarks {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.clubs-step-checkmarks li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
+    color: var(--primary-green);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.clubs-check-icon {
+    font-size: 11px;
+    opacity: 0.8;
+}
+
+/* Progress Bar */
+.clubs-step-progress {
+    width: 100%;
+    max-width: 180px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.clubs-step-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-green), rgba(199, 240, 67, 0.5));
+    border-radius: 2px;
+    transition: width 0.6s ease;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - TIMELINE
+   ============================================ */
+
+@media (max-width: 1400px) {
+    .clubs-timeline-section {
+        padding: 100px 80px;
+    }
+
+    .clubs-timeline-inner {
+        gap: 40px;
+    }
+
+    .clubs-timeline-header {
+        width: 350px;
+    }
+
+    .clubs-step-2 {
+        margin-left: 30px;
+    }
+
+    .clubs-step-3 {
+        margin-left: 60px;
+    }
+
+    .clubs-step-number {
+        font-size: 48px;
+        min-width: 60px;
+    }
+
+    .clubs-step-card {
+        padding: 24px 28px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .clubs-timeline-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clubs-timeline-header {
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+        margin-bottom: 20px;
+    }
+
+    .clubs-timeline-steps {
+        width: 100%;
+        max-width: 550px;
+    }
+
+    .clubs-step-1,
+    .clubs-step-2,
+    .clubs-step-3 {
+        margin-left: 0;
+    }
+
+    .clubs-step-card:hover {
+        transform: translateY(-4px);
+    }
+}
+
+@media (max-width: 968px) {
+    .clubs-timeline-section {
+        padding: 80px 40px;
+    }
+
+    .clubs-timeline-title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .clubs-timeline-subtitle {
+        font-size: 18px;
+    }
+
+    .clubs-step-number {
+        font-size: 40px;
+        min-width: 50px;
+    }
+
+    .clubs-step-title {
+        font-size: 18px;
+    }
+
+    .clubs-step-card {
+        padding: 20px 24px;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .clubs-timeline-section {
+        padding: 60px 20px;
+    }
+
+    .clubs-timeline-title {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .clubs-timeline-subtitle {
+        font-size: 16px;
+    }
+
+    .clubs-step-number {
+        font-size: 32px;
+        min-width: 40px;
+    }
+
+    .clubs-step-card {
+        padding: 18px 20px;
+        gap: 14px;
+    }
+
+    .clubs-step-description {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    .clubs-step-checkmarks li {
+        font-size: 12px;
+    }
+
+    .clubs-step-progress {
+        max-width: 100%;
+    }
+}
+
+/* ============================================
+   FAQ SECTION
+   ============================================ */
+
+.clubs-faq-section {
+    width: 100%;
+    padding: 80px 181px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-dark);
+}
+
+.clubs-faq-inner {
+    max-width: 814px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.clubs-faq-title {
+    font-family: 'Movatif', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text-white);
+    text-align: center;
+    line-height: 1.4;
+    max-width: 685px;
+    margin: 0;
+}
+
+.clubs-faq-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.clubs-faq-item {
+    width: 100%;
+    background: rgba(125, 121, 121, 0.05);
+    backdrop-filter: blur(12.5px);
+    -webkit-backdrop-filter: blur(12.5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: background 0.3s ease;
+}
+
+.clubs-faq-item:hover {
+    background: rgba(125, 121, 121, 0.08);
+}
+
+.clubs-faq-item-open {
+    background: rgba(125, 121, 121, 0.1);
+}
+
+.clubs-faq-question-btn {
+    width: 100%;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.clubs-faq-question {
+    font-family: 'Movatif', sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--text-white);
+    line-height: 1.4;
+}
+
+.clubs-faq-icon {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    background: #141414;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clubs-faq-plus-icon {
+    color: var(--primary-green);
+    transition: transform 0.3s ease;
+}
+
+.clubs-faq-plus-icon.rotated {
+    transform: rotate(45deg);
+}
+
+.clubs-faq-plus-icon .horizontal-line {
+    transition: opacity 0.3s ease;
+}
+
+.clubs-faq-answer-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.clubs-faq-item-open .clubs-faq-answer-wrapper {
+    max-height: 300px;
+}
+
+.clubs-faq-answer {
+    padding: 0 24px 24px 24px;
+}
+
+.clubs-faq-answer p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #c1c1c1;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - FAQ
+   ============================================ */
+
+@media (max-width: 1400px) {
+    .clubs-faq-section {
+        padding: 80px 80px;
+    }
+}
+
+@media (max-width: 968px) {
+    .clubs-faq-section {
+        padding: 60px 40px;
+    }
+
+    .clubs-faq-title {
+        font-size: 26px;
+    }
+
+    .clubs-faq-question {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 640px) {
+    .clubs-faq-section {
+        padding: 60px 20px;
+    }
+
+    .clubs-faq-title {
+        font-size: 22px;
+    }
+
+    .clubs-faq-question {
+        font-size: 15px;
+    }
+
+    .clubs-faq-question-btn {
+        padding: 16px 18px;
+        gap: 12px;
+    }
+
+    .clubs-faq-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .clubs-faq-plus-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .clubs-faq-answer {
+        padding: 0 18px 18px 18px;
+    }
+
+    .clubs-faq-list {
+        gap: 12px;
+    }
+}
+
+/* ============================================
+   CTA SECTION - "Ready to See the Other 50%?"
+   ============================================ */
+
+.clubs-cta-section {
+    width: 100%;
+    padding: 100px 0 120px;
+    background-color: var(--bg-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+.clubs-cta-inner {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Header */
+.clubs-cta-header {
+    margin-bottom: 60px;
+}
+
+.clubs-cta-title {
+    font-family: 'Movatif', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-white);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.clubs-cta-subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Tablet Image with Arches */
+.clubs-cta-image {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 60px;
+}
+
+
+.clubs-cta-ipad-screen-wrapper {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.clubs-cta-ipad-screen {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.clubs-cta-tablet {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Buttons */
+.clubs-cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.clubs-cta-buttons .btn-primary {
+    padding: 16px 32px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: var(--primary-green);
+    color: var(--bg-dark);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.clubs-cta-buttons .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 211, 99, 0.3);
+}
+
+.clubs-cta-buttons .btn-outline {
+    padding: 16px 32px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: transparent;
+    color: var(--text-white);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.clubs-cta-buttons .btn-outline:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* CTA Responsive */
+@media (max-width: 1200px) {
+    .clubs-cta-inner {
+        padding: 0 80px;
+    }
+
+    .clubs-cta-title {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 900px) {
+    .clubs-cta-section {
+        padding: 80px 0 100px;
+    }
+
+    .clubs-cta-inner {
+        padding: 0 40px;
+    }
+
+    .clubs-cta-title {
+        font-size: 36px;
+    }
+
+    .clubs-cta-subtitle {
+        font-size: 18px;
+    }
+
+    .clubs-cta-header {
+        margin-bottom: 40px;
+    }
+
+    .clubs-cta-image {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .clubs-cta-section {
+        padding: 60px 0 80px;
+    }
+
+    .clubs-cta-inner {
+        padding: 0 20px;
+    }
+
+    .clubs-cta-title {
+        font-size: 28px;
+    }
+
+    .clubs-cta-subtitle {
+        font-size: 16px;
+    }
+
+    .clubs-cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .clubs-cta-buttons .btn-primary,
+    .clubs-cta-buttons .btn-outline {
+        width: 100%;
+        padding: 14px 24px;
+    }
+}
