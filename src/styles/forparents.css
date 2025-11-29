@@ -16,6 +16,7 @@
     position: relative;
     background-color: var(--bg-dark);
 }
+/* Bottom gradient fade transition */.parents-hero-section::after {    content: '';    position: absolute;    bottom: 0;    left: 0;    width: 100%;    height: 150px;    background: linear-gradient(        to bottom,        transparent 0%,        rgba(15, 15, 15, 0.5) 50%,        #0f0f0f 100%    );    z-index: 3;    pointer-events: none;}
 
 .parents-hero-background {
     position: absolute;
@@ -31,18 +32,6 @@
     opacity: 0.35;
     filter: grayscale(100%);
     
-}
-
-.parents-hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(15, 15, 15, 0.3) 0%,
-        rgba(15, 15, 15, 0.5) 50%,
-        rgba(15, 15, 15, 0.95) 85%,
-        rgba(15, 15, 15, 1) 100%
-    );
 }
 
 .parents-hero-inner {

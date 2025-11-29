@@ -9,17 +9,19 @@ const HeroSection = () => {
           alt=""
           className="coaches-hero-bg-img"
         />
-        <div className="coaches-hero-overlay"></div>
       </div>
 
       <div className="coaches-hero-inner">
         <div className="coaches-hero-content">
           <h1 className="coaches-hero-title">
-            Stop Guessing Who's Mentally Ready. Start Making Data-Driven Decisions.
+            Stop Guessing Who's Mentally Ready. Start Making Data-Driven
+            Decisions.
           </h1>
 
           <p className="coaches-hero-description">
-            Like GPS revolutionized physical tracking, AthleteQ revolutionizes mental training. An entire ecosystem connecting athletes, coaches, clubs and experts to build mentally unbreakable champions.
+            Like GPS revolutionized physical tracking, AthleteQ revolutionizes
+            mental training. An entire ecosystem connecting athletes, coaches,
+            clubs and experts to build mentally unbreakable champions.
           </p>
 
           <div className="coaches-hero-buttons">
@@ -29,7 +31,9 @@ const HeroSection = () => {
             </div>
             <div className="coaches-button-group">
               <button className="btn-primary">See Coach Dashboard</button>
-              <span className="button-subtext">Interactive demo - no signup required</span>
+              <span className="button-subtext">
+                Interactive demo - no signup required
+              </span>
             </div>
           </div>
 

@@ -9,7 +9,6 @@ const HeroSection = () => {
           alt=""
           className="athletes-hero-bg-img"
         />
-        <div className="athletes-hero-overlay"></div>
       </div>
 
       <div className="athletes-hero-inner">
@@ -29,10 +28,13 @@ const HeroSection = () => {
             {/* Title + Description - gap 10px */}
             <div className="athletes-hero-title-wrapper">
               <h1 className="athletes-hero-title">
-                Train Your Mind Like You Train Your Body. See Results on the Field.
+                Train Your Mind Like You Train Your Body. See Results on the
+                Field.
               </h1>
               <p className="athletes-hero-description">
-                Without AthleteQ: You practice 10 hours a week but your mind gets 0 training. With AthleteQ: Mental Reps, AI coaching, and tracking - just like your physical training.
+                Without AthleteQ: You practice 10 hours a week but your mind
+                gets 0 training. With AthleteQ: Mental Reps, AI coaching, and
+                tracking - just like your physical training.
               </p>
             </div>
           </div>
