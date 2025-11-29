@@ -20,6 +20,8 @@ import ForAthletesPage from './components/forathletes/ForAthletesPage'
 
 // For Clubs page
 import ForClubsPage from './components/forclubs/ForClubsPage'
+// For Parents page
+import ForParentsPage from './components/forparents/ForParentsPage'
 
 // Homepage Component
 function HomePage() {
@@ -47,6 +49,7 @@ function App() {
         <Route path="/for-coaches" element={<ForCoachesPage />} />
         <Route path="/for-athletes" element={<ForAthletesPage />} />
         <Route path="/for-clubs" element={<ForClubsPage />} />
+        <Route path="/for-parents" element={<ForParentsPage />} />
       </Routes>
     </BrowserRouter>
   )
