@@ -27,11 +27,11 @@ const Navigation = () => {
             </svg>
           </a>
           <div className="dropdown-menu">
-            <a href="#clubs">For Clubs</a>
-            <a href="#athletes">For Athletes</a>
+            <Link to="/for-clubs">For Clubs</Link>
+            <Link to="/for-athletes">For Athletes</Link>
             <Link to="/for-coaches">For Coaches</Link>
-            <a href="#parents">For Parents</a>
-            <a href="#experts">For Experts</a>
+            <Link to="/for-parents">For Parents</Link>
+            <Link to="/for-experts">For Experts</Link>
           </div>
         </div>
         <a href="#how-it-works">HOW IT WORKS</a>

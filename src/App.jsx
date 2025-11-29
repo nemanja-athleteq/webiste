@@ -23,6 +23,9 @@ import ForClubsPage from './components/forclubs/ForClubsPage'
 // For Parents page
 import ForParentsPage from './components/forparents/ForParentsPage'
 
+// For Experts page
+import ForExpertsPage from './components/forexperts/ForExpertsPage'
+
 // Homepage Component
 function HomePage() {
   useHomepage2Effects();
@@ -50,6 +53,7 @@ function App() {
         <Route path="/for-athletes" element={<ForAthletesPage />} />
         <Route path="/for-clubs" element={<ForClubsPage />} />
         <Route path="/for-parents" element={<ForParentsPage />} />
+        <Route path="/for-experts" element={<ForExpertsPage />} />
       </Routes>
     </BrowserRouter>
   )
