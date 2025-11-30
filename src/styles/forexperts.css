@@ -3,6 +3,14 @@
 .for-experts-page {
   background-color: #0f0f0f;
   min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.for-experts-page main {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* ==================== HERO SECTION ==================== */
@@ -650,4 +658,516 @@
   font-size: 14px;
   padding: 10px 16px;
   border-radius: 69px;
+}
+
+/* ==================== RESPONSIVE STYLES ==================== */
+
+/* Tablet - 968px */
+@media (max-width: 968px) {
+  /* Hero */
+  .experts-hero-inner {
+    padding: 150px 32px 80px;
+  }
+
+  .experts-hero-title {
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  /* Problem Section */
+  .experts-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .experts-stat-value {
+    font-size: 48px;
+  }
+
+  /* Practice Section */
+  .experts-practice-block {
+    gap: 40px;
+  }
+
+  .experts-context-block {
+    gap: 40px;
+  }
+
+  .experts-practice-title,
+  .experts-context-title {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+/* Mobile - 640px */
+@media (max-width: 640px) {
+  /* Hero Section */
+  .experts-hero-section {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .experts-hero-inner {
+    padding: 100px 24px 40px;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .experts-hero-eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
+    margin-top: auto;
+  }
+
+  .experts-hero-title {
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 20px;
+  }
+
+  .experts-hero-subtitle {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 28px;
+  }
+
+  .experts-hero-buttons {
+    flex-direction: row;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .experts-hero-btn-primary,
+  .experts-hero-btn-secondary {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .experts-hero-badges {
+    margin-top: auto;
+    padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+    gap: 10px;
+  }
+
+  .experts-hero-badge {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  /* Problem Section */
+  .experts-problem-section {
+    padding: 60px 0;
+  }
+
+  .experts-problem-inner {
+    padding: 0 24px;
+  }
+
+  .experts-problem-title {
+    font-size: 26px;
+    line-height: 36px;
+    margin-bottom: 16px;
+  }
+
+  .experts-problem-subtitle {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 40px;
+  }
+
+  .experts-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .experts-stat-card {
+    padding: 24px 20px;
+  }
+
+  .experts-stat-value {
+    font-size: 42px;
+  }
+
+  .experts-stat-unit {
+    font-size: 16px;
+  }
+
+  .experts-stat-label {
+    font-size: 14px;
+  }
+
+  .experts-stat-description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .experts-problems-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .experts-problem-card {
+    padding: 24px;
+  }
+
+  .experts-problem-card-dot {
+    top: 32px;
+    left: 26px;
+  }
+
+  .experts-problem-card-title {
+    font-size: 16px;
+  }
+
+  .experts-problem-card-description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .experts-problem-bottom-message {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  /* Practice Section */
+  .experts-practice-section {
+    padding: 60px 0;
+  }
+
+  .experts-practice-inner {
+    padding: 0 24px;
+  }
+
+  .experts-practice-glow {
+    width: 250px;
+    height: 250px;
+    top: 300px;
+    left: -50px;
+  }
+
+  .experts-practice-block {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 60px;
+  }
+
+  .experts-practice-content {
+    max-width: 100%;
+    order: 1;
+  }
+
+  .experts-practice-image {
+    order: 2;
+    height: 300px;
+  }
+
+  .experts-practice-title {
+    font-size: 26px;
+    line-height: 36px;
+    margin-bottom: 24px;
+  }
+
+  .experts-practice-stats {
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .experts-practice-stat-value {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .experts-practice-stat-label {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .experts-practice-description {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  /* Context Block */
+  .experts-context-block {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .experts-context-image {
+    order: 2;
+  }
+
+  .experts-context-content {
+    max-width: 100%;
+    order: 1;
+  }
+
+  .experts-context-title {
+    font-size: 26px;
+    line-height: 36px;
+    margin-bottom: 16px;
+  }
+
+  .experts-context-description {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 24px;
+  }
+
+  .experts-context-feature-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .experts-context-feature-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  /* FAQ Section */
+  .experts-faq-section {
+    padding: 60px 0;
+  }
+
+  .experts-faq-inner {
+    padding: 0 24px;
+  }
+
+  .experts-faq-title {
+    font-size: 26px;
+    line-height: 36px;
+    margin-bottom: 40px;
+  }
+
+  .experts-faq-question-btn {
+    padding: 20px;
+  }
+
+  .experts-faq-question {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .experts-faq-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .experts-faq-answer {
+    padding: 0 20px 20px;
+  }
+
+  .experts-faq-answer p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  /* CTA Section */
+  .experts-cta-section {
+    padding: 60px 0;
+  }
+
+  .experts-cta-inner {
+    padding: 0 24px;
+  }
+
+  .experts-cta-glow {
+    width: 280px;
+    height: 280px;
+  }
+
+  .experts-cta-title {
+    font-size: 26px;
+    line-height: 36px;
+    margin-bottom: 12px;
+  }
+
+  .experts-cta-subtitle {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 32px;
+  }
+
+  .experts-cta-button {
+    margin-bottom: 40px;
+    padding: 14px 28px;
+  }
+
+  .experts-cta-badges {
+    gap: 10px;
+  }
+
+  .experts-cta-badge {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+
+/* Small Mobile - 480px */
+@media (max-width: 480px) {
+  /* Hero */
+  .experts-hero-inner {
+    padding: 90px 20px 32px;
+  }
+
+  .experts-hero-title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .experts-hero-subtitle {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .experts-hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .experts-hero-btn-primary,
+  .experts-hero-btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .experts-hero-badges {
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .experts-hero-badge {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  /* Problem Section */
+  .experts-problem-section {
+    padding: 50px 0;
+  }
+
+  .experts-problem-inner {
+    padding: 0 20px;
+  }
+
+  .experts-problem-title {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .experts-stat-value {
+    font-size: 36px;
+  }
+
+  .experts-stat-card {
+    padding: 20px 16px;
+  }
+
+  /* Practice Section */
+  .experts-practice-section {
+    padding: 50px 0;
+  }
+
+  .experts-practice-inner {
+    padding: 0 20px;
+  }
+
+  .experts-practice-title,
+  .experts-context-title {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .experts-practice-image {
+    height: 250px;
+  }
+
+  .experts-practice-stat-value {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  /* FAQ Section */
+  .experts-faq-section {
+    padding: 50px 0;
+  }
+
+  .experts-faq-inner {
+    padding: 0 20px;
+  }
+
+  .experts-faq-title {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .experts-faq-question {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .experts-faq-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* CTA Section */
+  .experts-cta-section {
+    padding: 50px 0;
+  }
+
+  .experts-cta-inner {
+    padding: 0 20px;
+  }
+
+  .experts-cta-title {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .experts-cta-subtitle {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+/* Extra Small Mobile - 380px */
+@media (max-width: 380px) {
+  .experts-hero-title {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .experts-hero-subtitle {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .experts-hero-badge {
+    font-size: 10px;
+    padding: 5px 8px;
+  }
+
+  .experts-problem-title,
+  .experts-practice-title,
+  .experts-context-title,
+  .experts-faq-title,
+  .experts-cta-title {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  .experts-stat-value {
+    font-size: 32px;
+  }
+
+  .experts-practice-stat-value {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
