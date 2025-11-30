@@ -267,6 +267,37 @@
     }
 }
 
+@media (max-width: 480px) {
+    .clubs-hero-inner {
+        padding: 80px 16px 24px;
+    }
+
+    .clubs-hero-title {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .clubs-hero-description {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .clubs-hero-buttons .btn-primary,
+    .clubs-hero-buttons .btn-outline {
+        max-width: 100%;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .clubs-badge {
+        padding: 6px 10px;
+    }
+
+    .clubs-badge-text {
+        font-size: 11px;
+    }
+}
+
 /* ============================================
    PROBLEM/SOLUTION SECTION
    ============================================ */
@@ -320,7 +351,7 @@
     display: flex;
     flex-direction: column;
     max-width: 1149px;
-    width: 1149px;
+    width: 100%;
 }
 
 /* Comparison Blocks */
@@ -542,6 +573,35 @@
     }
 }
 
+@media (max-width: 480px) {
+    .clubs-problem-solution-section {
+        padding: 50px 16px;
+    }
+
+    .clubs-section-title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .clubs-section-subtitle {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .clubs-comparison-title {
+        font-size: 18px;
+    }
+
+    .clubs-comparison-list li {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .clubs-comparison-image {
+        height: 180px;
+    }
+}
+
 /* ============================================
    CAPABILITIES SECTION
    ============================================ */
@@ -668,7 +728,6 @@
         line-height: 40px;
     }
 }
-/* Horizontal line from title to connector */.clubs-capabilities-header::after {    content: '';    position: absolute;    right: -40px;    top: 50%;    width: 100px;    height: 1px;    background-color: white;}
 
 @media (max-width: 1200px) {
     .clubs-capabilities-inner {
@@ -699,7 +758,6 @@
         text-align: left;
     }
 }
-/* Horizontal line from title to connector */.clubs-capabilities-header::after {    content: '';    position: absolute;    right: -40px;    top: 50%;    width: 100px;    height: 1px;    background-color: white;}
 
 @media (max-width: 968px) {
     .clubs-capabilities-section {
@@ -754,6 +812,35 @@
 
     .clubs-capability-content {
         max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .clubs-capabilities-section {
+        padding: 50px 16px;
+    }
+
+    .clubs-capabilities-title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .clubs-capabilities-subtitle {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .clubs-capabilities-list {
+        gap: 32px;
+    }
+
+    .clubs-capability-title {
+        font-size: 16px;
+    }
+
+    .clubs-capability-description {
+        font-size: 14px;
+        line-height: 24px;
     }
 }
 
@@ -1046,6 +1133,45 @@
     }
 }
 
+@media (max-width: 480px) {
+    .clubs-investment-section {
+        padding: 50px 16px;
+    }
+
+    .clubs-investment-title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .clubs-investment-subtitle {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .clubs-investment-card {
+        padding: 16px;
+    }
+
+    .clubs-card-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .clubs-item-label,
+    .clubs-item-value {
+        font-size: 13px;
+    }
+
+    .clubs-total-label,
+    .clubs-total-value {
+        font-size: 15px;
+    }
+
+    .clubs-conclusion-text,
+    .clubs-conclusion-highlight {
+        font-size: 15px;
+    }
+}
 
 /* ============================================
    TIMELINE SECTION - STAIRCASE PROGRESS
@@ -1384,6 +1510,45 @@
     }
 }
 
+@media (max-width: 480px) {
+    .clubs-timeline-section {
+        padding: 50px 16px;
+    }
+
+    .clubs-timeline-title {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .clubs-timeline-subtitle {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .clubs-step-number {
+        font-size: 28px;
+        min-width: 35px;
+    }
+
+    .clubs-step-card {
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .clubs-step-title {
+        font-size: 16px;
+    }
+
+    .clubs-step-description {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .clubs-step-checkmarks li {
+        font-size: 11px;
+    }
+}
+
 /* ============================================
    FAQ SECTION
    ============================================ */
@@ -1570,6 +1735,42 @@
     }
 }
 
+@media (max-width: 480px) {
+    .clubs-faq-section {
+        padding: 50px 16px;
+    }
+
+    .clubs-faq-title {
+        font-size: 20px;
+    }
+
+    .clubs-faq-question {
+        font-size: 14px;
+    }
+
+    .clubs-faq-question-btn {
+        padding: 14px 16px;
+        gap: 10px;
+    }
+
+    .clubs-faq-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .clubs-faq-answer {
+        padding: 0 16px 16px 16px;
+    }
+
+    .clubs-faq-answer p {
+        font-size: 14px;
+    }
+
+    .clubs-faq-list {
+        gap: 10px;
+    }
+}
+
 /* ============================================
    CTA SECTION - "Ready to See the Other 50%?"
    ============================================ */
@@ -1753,5 +1954,37 @@
     .clubs-cta-buttons .btn-outline {
         width: 100%;
         padding: 14px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .clubs-cta-section {
+        padding: 50px 0 60px;
+    }
+
+    .clubs-cta-inner {
+        padding: 0 16px;
+    }
+
+    .clubs-cta-title {
+        font-size: 24px;
+    }
+
+    .clubs-cta-subtitle {
+        font-size: 15px;
+    }
+
+    .clubs-cta-header {
+        margin-bottom: 32px;
+    }
+
+    .clubs-cta-image {
+        margin-bottom: 32px;
+    }
+
+    .clubs-cta-buttons .btn-primary,
+    .clubs-cta-buttons .btn-outline {
+        padding: 12px 20px;
+        font-size: 14px;
     }
 }
