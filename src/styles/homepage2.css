@@ -1884,30 +1884,512 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 640px) {
-    .hero-title {
-        font-size: 28px;
+    /* Hero Section */
+    .hero-section {
+        min-height: 100vh;
+        min-height: 100dvh;
+        padding: 100px 0 60px;
     }
 
-    .hero-description,
-    .ai-coach-content p,
-    .cta-inner .subtitle {
+    .hero-inner {
+        padding: 0 24px;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .hero-content {
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: 32px;
+        line-height: 42px;
+        margin-bottom: 20px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        width: auto;
+        gap: 12px;
+        justify-content: flex-start;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: auto;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    /* AI Coach Section */
+    .ai-coach-section {
+        padding: 60px 0;
+    }
+
+    .ai-coach-inner {
+        padding: 0 24px;
+        gap: 40px;
+    }
+
+    .ai-coach-content {
+        text-align: left;
+    }
+
+    .ai-coach-content h2 {
+        font-size: 28px;
+        line-height: 38px;
+        margin-bottom: 20px;
+    }
+
+    .ai-coach-content p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    /* Phone Mockup Responsive */
+    .phone-mockup-wrapper {
+        width: 280px;
+        height: 500px;
+    }
+
+    /* Decoration SVGs - smaller on mobile */
+    .decoration-svg {
+        width: 60px;
+    }
+
+    .decoration-svg-top-left {
+        top: -40px;
+        left: -30px;
+    }
+
+    .decoration-svg-top-right {
+        top: -40px;
+        right: -30px;
+    }
+
+    .decoration-svg-bottom-left {
+        bottom: -50px;
+        left: -30px;
+    }
+
+    .decoration-svg-bottom-right {
+        bottom: -50px;
+        right: -30px;
+    }
+
+    /* Slider Section */
+    .slider-section {
+        min-height: 300vh;
+    }
+
+    .slider-sticky-wrapper {
+        padding: 80px 24px;
+    }
+
+    .slider-inner {
+        padding: 0;
+    }
+
+    .slider-inner h2 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .slide-heading {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .slide-highlight,
+    .slide-highlight-list {
         font-size: 18px;
+        line-height: 26px;
+    }
+
+    .slide-highlight-paragraph {
+        font-size: 17px;
+        line-height: 26px;
+    }
+
+    .ecosystem-title {
+        font-size: 36px;
+        left: 24px;
+        top: -20px;
+        max-width: calc(100% - 48px);
+    }
+
+    .metric-badge {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+
+    /* Perspectives Section */
+    .perspectives-section {
+        padding: 60px 0;
+    }
+
+    .perspectives-inner {
+        gap: 40px;
+    }
+
+    .section-header {
+        padding: 0 24px;
+    }
+
+    .section-header h2 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .section-header p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .cards-grid {
+        padding: 0 24px;
+        gap: 16px;
+    }
+
+    .perspective-card {
+        max-width: 100%;
+        height: 400px;
+    }
+
+    .perspective-card h3 {
+        font-size: 18px;
+    }
+
+    .card-hover-title {
+        font-size: 18px;
+    }
+
+    .card-hover-description {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    /* Testimonials Section */
+    .testimonials-section {
+        padding: 60px 0;
+    }
+
+    .testimonials-inner {
+        padding: 0 24px;
+    }
+
+    .testimonials-inner h2 {
+        font-size: 24px;
+        line-height: 34px;
+        margin-bottom: 48px;
+    }
+
+    .testimonials-grid {
+        gap: 32px;
+    }
+
+    .testimonial-card {
+        max-width: 100%;
+    }
+
+    .testimonial-card:nth-child(1),
+    .testimonial-card:nth-child(3) {
+        margin-top: 0;
+    }
+
+    .avatar {
+        width: 140px;
+        height: 140px;
+        margin-bottom: -60px;
+    }
+
+    .testimonial-content {
+        padding: 90px 24px 36px;
+        min-height: auto;
+        border-radius: 24px;
+    }
+
+    .quote {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+
+    .author .name,
+    .author .role {
+        font-size: 14px;
+    }
+
+    /* Decoration blob */
+    .decoration-blob {
+        width: 300px;
+        height: 350px;
+        bottom: -150px;
+    }
+
+    .decoration-lines {
+        display: none;
+    }
+
+    /* CTA Section */
+    .cta-section {
+        padding: 80px 0;
+    }
+
+    .cta-inner {
+        padding: 0 24px;
+        gap: 40px;
+    }
+
+    .cta-inner h2 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .cta-inner .subtitle {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .cta-text-group {
+        gap: 20px;
+    }
+
+    .trusted-section {
+        gap: 20px;
+    }
+
+    .trusted-section h3 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .club-logos {
+        gap: 20px;
+    }
+
+    .club-logos img,
+    .club-logo-svg {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+/* ============================================
+   480px BREAKPOINT - Small Mobile
+   ============================================ */
+@media (max-width: 480px) {
+    /* Hero Section */
+    .hero-section {
+        padding: 90px 0 50px;
+    }
+
+    .hero-inner {
+        padding: 0 16px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+        line-height: 24px;
     }
 
     .hero-buttons {
         flex-direction: column;
         width: 100%;
-        gap: 16px;
-    }
-
-    .hero-image {
-        max-width: 320px;
-        height: 340px;
     }
 
     .btn-primary,
     .btn-secondary {
         width: 100%;
+        padding: 14px 24px;
+    }
+
+    /* AI Coach Section */
+    .ai-coach-section {
+        padding: 50px 0;
+    }
+
+    .ai-coach-inner {
+        padding: 0 16px;
+        gap: 32px;
+    }
+
+    .ai-coach-content h2 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .ai-coach-content p {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .phone-mockup-wrapper {
+        width: 240px;
+        height: 430px;
+    }
+
+    .decoration-svg {
+        width: 50px;
+    }
+
+    /* Slider Section */
+    .slider-sticky-wrapper {
+        padding: 60px 16px;
+    }
+
+    .slider-inner h2 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .slide-heading {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .slide-highlight,
+    .slide-highlight-list {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .ecosystem-title {
+        font-size: 28px;
+        left: 16px;
+    }
+
+    .metric-badge {
+        padding: 6px 16px;
+        font-size: 11px;
+    }
+
+    /* Perspectives Section */
+    .perspectives-section {
+        padding: 50px 0;
+    }
+
+    .section-header {
+        padding: 0 16px;
+    }
+
+    .section-header h2 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .section-header p {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .cards-grid {
+        padding: 0 16px;
+    }
+
+    .perspective-card {
+        height: 350px;
+    }
+
+    /* Testimonials Section */
+    .testimonials-section {
+        padding: 50px 0;
+    }
+
+    .testimonials-inner {
+        padding: 0 16px;
+    }
+
+    .testimonials-inner h2 {
+        font-size: 22px;
+        line-height: 32px;
+        margin-bottom: 36px;
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+        margin-bottom: -50px;
+    }
+
+    .testimonial-content {
+        padding: 76px 20px 32px;
+    }
+
+    .quote {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .author .name,
+    .author .role {
+        font-size: 13px;
+    }
+
+    /* CTA Section */
+    .cta-section {
+        padding: 60px 0;
+    }
+
+    .cta-inner {
+        padding: 0 16px;
+        gap: 32px;
+    }
+
+    .cta-inner h2 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .cta-inner .subtitle {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .trusted-section h3 {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .club-logos img,
+    .club-logo-svg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .note {
+        font-size: 14px;
+    }
+}
+
+/* ============================================
+   380px BREAKPOINT - Very Small Mobile
+   ============================================ */
+@media (max-width: 380px) {
+    .hero-title {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+        line-height: 22px;
     }
 
     .ai-coach-content h2,
@@ -1915,8 +2397,37 @@ h1, h2, h3, h4 {
     .section-header h2,
     .testimonials-inner h2,
     .cta-inner h2 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .phone-mockup-wrapper {
+        width: 220px;
+        height: 395px;
+    }
+
+    .ecosystem-title {
         font-size: 24px;
-        line-height: 36px;
+    }
+
+    .perspective-card {
+        height: 320px;
+    }
+
+    .avatar {
+        width: 100px;
+        height: 100px;
+        margin-bottom: -40px;
+    }
+
+    .testimonial-content {
+        padding: 64px 16px 28px;
+    }
+
+    .club-logos img,
+    .club-logo-svg {
+        width: 42px;
+        height: 42px;
     }
 }
 
