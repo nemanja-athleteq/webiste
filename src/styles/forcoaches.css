@@ -194,19 +194,126 @@
 }
 
 @media (max-width: 640px) {
+    .coaches-hero-section {
+        min-height: 100vh;
+        min-height: 100dvh;
+    }
+
+    .coaches-hero-inner {
+        padding: 100px 24px 0;
+        min-height: 100vh;
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .coaches-hero-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+        flex: 1;
+    }
+
     .coaches-hero-title {
         font-size: 26px;
+        margin-bottom: 20px;
+        text-align: left;
+        margin-top: auto;
     }
 
     .coaches-hero-description {
         font-size: 16px;
         line-height: 26px;
+        margin-bottom: 32px;
+        text-align: left;
+    }
+
+    .coaches-hero-buttons {
+        margin-bottom: 0;
+        flex-direction: row;
+        gap: 12px;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .coaches-button-group {
+        align-items: flex-start;
     }
 
     .coaches-hero-section .club-logos img,
     .coaches-hero-section .club-logos .club-logo-svg {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .coaches-trusted-section {
+        gap: 12px;
+        align-items: center;
+        padding: 24px 0;
+        padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+        margin-top: auto;
+    }
+
+    .coaches-hero-section .club-logos {
+        justify-content: center;
+    }
+
+    .coaches-trusted-text {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .coaches-hero-inner {
+        padding: 90px 16px 0;
+    }
+
+    .coaches-hero-title {
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 16px;
+    }
+
+    .coaches-hero-description {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 24px;
+    }
+
+    .coaches-hero-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .coaches-button-group .btn-primary {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .button-subtext {
+        font-size: 11px;
+    }
+
+    .coaches-hero-section .club-logos img,
+    .coaches-hero-section .club-logos .club-logo-svg {
+        width: 44px;
+        height: 44px;
+    }
+
+    .coaches-hero-section .club-logos {
+        gap: 12px;
+    }
+
+    .coaches-trusted-section {
+        padding: 20px 0;
+        padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .coaches-trusted-text {
+        font-size: 12px;
     }
 }
 
@@ -414,18 +521,39 @@
 }
 
 @media (max-width: 640px) {
+    .coaches-problem-section {
+        padding: 48px 24px 60px;
+    }
+
     .problem-stats {
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0;
     }
 
     .problem-stat {
         text-align: center;
+        padding: 12px 16px;
+        flex: 1;
+        min-width: 100px;
     }
 
     .problem-stat .stat-divider {
+        display: block;
+        height: 40px;
+    }
+
+    .problem-stat:last-child .stat-divider {
         display: none;
+    }
+
+    .problem-stat .stat-label {
+        font-size: 14px;
+    }
+
+    .problem-stat .stat-value {
+        font-size: 14px;
     }
 
     .problem-title {
@@ -433,8 +561,71 @@
         line-height: 32px;
     }
 
+    .problem-image-wrapper {
+        height: 250px;
+    }
+
     .industry-truth-quote {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .coaches-problem-section {
+        padding: 40px 16px 50px;
+    }
+
+    .problem-stats {
+        gap: 0;
+    }
+
+    .problem-stat {
+        padding: 10px 10px;
+        min-width: 90px;
+    }
+
+    .problem-stat .stat-label {
+        font-size: 12px;
+    }
+
+    .problem-stat .stat-value {
+        font-size: 12px;
+    }
+
+    .problem-stat .stat-divider {
+        height: 32px;
+        width: 3px;
+    }
+
+    .problem-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .problem-description {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .problem-image-wrapper {
+        height: 200px;
+    }
+
+    .industry-truth-box {
+        padding: 16px;
+    }
+
+    .industry-truth-title {
+        font-size: 16px;
+    }
+
+    .industry-truth-quote {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .industry-truth-source {
+        font-size: 14px;
     }
 }
 
@@ -598,6 +789,10 @@
 }
 
 @media (max-width: 640px) {
+    .coaches-solution-section {
+        padding: 48px 24px 60px;
+    }
+
     .solution-title {
         font-size: 22px;
         line-height: 32px;
@@ -613,6 +808,35 @@
 
     .solution-description {
         font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .coaches-solution-section {
+        padding: 40px 16px 50px;
+    }
+
+    .solution-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .solution-subtitle {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .solution-feature-title {
+        font-size: 16px;
+    }
+
+    .solution-description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .solution-label {
+        font-size: 14px;
     }
 }
 
@@ -814,9 +1038,13 @@
 }
 
 @media (max-width: 640px) {
+    .coaches-success-inner {
+        padding: 0 24px;
+    }
+
     .success-badges {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .success-title {
@@ -829,6 +1057,73 @@
 
     .success-quote {
         font-size: 14px;
+    }
+
+    .success-content {
+        text-align: center;
+        align-items: center;
+    }
+
+    .success-header {
+        align-items: center;
+    }
+
+    .success-block {
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .coaches-success-section {
+        padding: 40px 0;
+    }
+
+    .coaches-success-inner {
+        padding: 0 16px;
+    }
+
+    .success-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .success-label {
+        font-size: 12px;
+    }
+
+    .success-image-container {
+        height: 220px;
+    }
+
+    .success-block-label {
+        font-size: 12px;
+    }
+
+    .success-block-text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .success-badge {
+        font-size: 12px;
+        padding: 4px 14px;
+    }
+
+    .success-quote-box {
+        padding: 18px 14px;
+    }
+
+    .success-quote {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .success-cta {
+        font-size: 14px;
+    }
+
+    .success-content {
+        gap: 32px;
     }
 }
 
@@ -1011,6 +1306,34 @@
     }
 }
 
+@media (max-width: 480px) {
+    .coaches-faq-section {
+        padding: 40px 0 50px;
+    }
+
+    .coaches-faq-inner {
+        padding: 0 16px;
+    }
+
+    .faq-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .faq-question {
+        font-size: 14px;
+    }
+
+    .faq-item {
+        border-radius: 16px;
+    }
+
+    .faq-answer p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
 /* ===================================
    CTA SECTION (Section 6)
    =================================== */
@@ -1132,7 +1455,7 @@
 
 @media (max-width: 640px) {
     .coaches-cta-section {
-        padding: 80px 20px;
+        padding: 80px 24px;
     }
 
     .cta-title {
@@ -1155,5 +1478,43 @@
         width: 350px;
         height: auto;
         opacity: 0.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .coaches-cta-section {
+        padding: 60px 16px;
+    }
+
+    .cta-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .cta-subtitle {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .coaches-cta-inner {
+        gap: 32px;
+    }
+
+    .cta-header {
+        gap: 20px;
+    }
+
+    .cta-button {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .cta-button-note {
+        font-size: 14px;
+    }
+
+    .cta-blob-decoration {
+        width: 280px;
+        opacity: 0.5;
     }
 }
