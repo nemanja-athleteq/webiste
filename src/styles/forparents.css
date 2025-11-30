@@ -2,6 +2,18 @@
    FOR PARENTS PAGE STYLES
    ============================================ */
 
+/* Page wrapper - prevent horizontal overflow */
+.for-parents-page {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.for-parents-page main {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 /* ============================================
    HERO SECTION
    ============================================ */
@@ -157,6 +169,28 @@
     .parents-hero-buttons .btn-outline {
         width: 100%;
         text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .parents-hero-inner {
+        padding: 80px 16px 32px;
+    }
+
+    .parents-hero-title {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .parents-hero-description {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .parents-hero-buttons .btn-primary,
+    .parents-hero-buttons .btn-outline {
+        padding: 12px 20px;
+        font-size: 14px;
     }
 }
 
@@ -368,6 +402,42 @@
     }
 }
 
+@media (max-width: 480px) {
+    .parents-conversations-section {
+        padding: 50px 0 60px;
+    }
+
+    .parents-conversations-inner {
+        padding: 0 16px;
+    }
+
+    .parents-conversations-title {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .parents-conversations-header {
+        margin-bottom: 40px;
+    }
+
+    .parents-table-header .parents-table-col-left,
+    .parents-table-header .parents-table-col-right {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .parents-table-col-left,
+    .parents-table-col-right {
+        padding: 14px 12px;
+        font-size: 13px;
+    }
+
+    .parents-conversations-bottom {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
 /* ============================================
    FEATURES SECTION - "What You Get as a Parent"
    ============================================ */
@@ -561,6 +631,52 @@
     }
 }
 
+@media (max-width: 480px) {
+    .parents-features-section {
+        padding: 50px 0;
+    }
+
+    .parents-features-inner {
+        padding: 0 16px;
+    }
+
+    .parents-features-header {
+        margin-bottom: 50px;
+    }
+
+    .parents-features-header .parents-features-title {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .parents-features-list {
+        gap: 50px;
+    }
+
+    .parents-feature-content .parents-feature-title {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 16px;
+    }
+
+    .parents-feature-number {
+        font-size: 16px;
+    }
+
+    .parents-feature-block-label {
+        font-size: 12px;
+    }
+
+    .parents-feature-block-text {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .parents-feature-image {
+        max-width: 280px;
+    }
+}
+
 /* ============================================
    TESTIMONIALS SECTION - "What Parents Are Saying"
    ============================================ */
@@ -745,6 +861,51 @@
     }
 }
 
+@media (max-width: 480px) {
+    .parents-testimonials-section {
+        padding: 50px 0;
+    }
+
+    .parents-testimonials-inner {
+        padding: 0 16px;
+    }
+
+    .parents-testimonials-header {
+        margin-bottom: 40px;
+    }
+
+    .parents-testimonials-title {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .parents-testimonial-card {
+        padding: 20px;
+    }
+
+    .parents-testimonial-quote {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .parents-testimonial-name {
+        font-size: 14px;
+    }
+
+    .parents-testimonial-role {
+        font-size: 12px;
+    }
+
+    .parents-testimonials-link {
+        font-size: 16px;
+    }
+
+    .parents-testimonials-glow {
+        width: 280px;
+        height: 280px;
+    }
+}
+
 /* ============================================
    FAQ SECTION - "You're Probably Wondering..."
    ============================================ */
@@ -903,6 +1064,49 @@
     }
 }
 
+@media (max-width: 480px) {
+    .parents-faq-section {
+        padding: 50px 0;
+    }
+
+    .parents-faq-inner {
+        padding: 0 16px;
+    }
+
+    .parents-faq-title {
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 40px;
+    }
+
+    .parents-faq-question {
+        font-size: 15px;
+    }
+
+    .parents-faq-question-btn {
+        padding: 14px 16px;
+        gap: 10px;
+    }
+
+    .parents-faq-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .parents-faq-answer {
+        padding: 0 16px 16px 16px;
+    }
+
+    .parents-faq-answer p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .parents-faq-list {
+        gap: 10px;
+    }
+}
+
 /* ============================================
    CTA SECTION - "Stop Worrying. Start Knowing."
    ============================================ */
@@ -1012,5 +1216,32 @@
     .parents-cta-subtitle {
         font-size: 16px;
         line-height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .parents-cta-section {
+        min-height: 400px;
+    }
+
+    .parents-cta-inner {
+        padding: 60px 16px;
+    }
+
+    .parents-cta-title {
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 16px;
+    }
+
+    .parents-cta-subtitle {
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 32px;
+    }
+
+    .parents-cta-button {
+        padding: 12px 20px;
+        font-size: 14px;
     }
 }
