@@ -1040,11 +1040,19 @@
 @media (max-width: 640px) {
     .coaches-success-inner {
         padding: 0 24px;
+        gap: 20px;
     }
 
     .success-badges {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .success-badge {
+        font-size: 13px;
+        padding: 4px 14px;
     }
 
     .success-title {
@@ -1052,7 +1060,7 @@
     }
 
     .success-image-container {
-        height: 280px;
+        height: 260px;
     }
 
     .success-quote {
@@ -1062,6 +1070,7 @@
     .success-content {
         text-align: center;
         align-items: center;
+        gap: 28px;
     }
 
     .success-header {
@@ -1070,6 +1079,10 @@
 
     .success-block {
         align-items: center;
+    }
+
+    .success-details {
+        gap: 16px;
     }
 }
 
@@ -1080,6 +1093,7 @@
 
     .coaches-success-inner {
         padding: 0 16px;
+        gap: 16px;
     }
 
     .success-title {
@@ -1092,7 +1106,7 @@
     }
 
     .success-image-container {
-        height: 220px;
+        height: 200px;
     }
 
     .success-block-label {
@@ -1104,13 +1118,23 @@
         line-height: 20px;
     }
 
+    .success-badges {
+        gap: 6px;
+    }
+
     .success-badge {
-        font-size: 12px;
-        padding: 4px 14px;
+        font-size: 11px;
+        padding: 3px 10px;
+        gap: 6px;
+    }
+
+    .success-badge svg {
+        width: 14px;
+        height: 14px;
     }
 
     .success-quote-box {
-        padding: 18px 14px;
+        padding: 16px 12px;
     }
 
     .success-quote {
@@ -1123,7 +1147,11 @@
     }
 
     .success-content {
-        gap: 32px;
+        gap: 24px;
+    }
+
+    .success-details {
+        gap: 12px;
     }
 }
 
